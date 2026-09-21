@@ -1,0 +1,1 @@
+import VisualTrainingQuiz from "@/components/training/VisualTrainingQuiz";import DemoTrainingGate from "@/components/demo/DemoTrainingGate";export default function Page(){return <DemoTrainingGate moduleSlug="forklift-pedestrian-safety"><VisualTrainingQuiz moduleSlug="forklift-pedestrian-safety"/></DemoTrainingGate>}

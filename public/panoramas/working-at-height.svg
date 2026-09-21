@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2048" viewBox="0 0 4096 2048">
+<defs>
+  <linearGradient id="ceiling" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#253844"/><stop offset="1" stop-color="#374c58"/></linearGradient>
+  <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#edf4f7"/><stop offset="1" stop-color="#cbd7de"/></linearGradient>
+  <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8999a2"/><stop offset="1" stop-color="#5d6c76"/></linearGradient>
+  <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f5f86"/><stop offset="1" stop-color="#103c5d"/></linearGradient>
+  <linearGradient id="safety" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd55f"/><stop offset="1" stop-color="#eba317"/></linearGradient>
+  <linearGradient id="vest" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#28a08d"/><stop offset="1" stop-color="#176a68"/></linearGradient>
+  <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e1aa83"/><stop offset="1" stop-color="#bd7e59"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c8e7f4" stop-opacity=".96"/><stop offset="1" stop-color="#6f9fb5" stop-opacity=".9"/></linearGradient>
+  <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="14" result="blur"/><feOffset in="blur" dx="0" dy="16" result="offset"/><feComponentTransfer in="offset" result="shadow"><feFuncA type="linear" slope="0.24"/></feComponentTransfer><feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur2"/><feOffset in="blur2" dx="0" dy="8" result="offset2"/><feComponentTransfer in="offset2" result="shadow2"><feFuncA type="linear" slope="0.18"/></feComponentTransfer><feMerge><feMergeNode in="shadow2"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="lightGlow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="22"/></filter>
+</defs>
+
+<!-- industrial envelope -->
+<rect width="4096" height="540" fill="url(#ceiling)"/>
+<g fill="#435966"><path d="M0 70h760l-100 190H0z"/><path d="M820 70h760l-100 190H720z"/><path d="M1640 70h760l-100 190h-760z"/><path d="M2460 70h760l-100 190h-760z"/><path d="M3280 70h816v190h-916z"/></g>
+<g fill="#f4fbfe" opacity=".98"><rect x="190" y="286" width="420" height="42" rx="21"/><rect x="1030" y="286" width="420" height="42" rx="21"/><rect x="1870" y="286" width="420" height="42" rx="21"/><rect x="2710" y="286" width="420" height="42" rx="21"/><rect x="3510" y="286" width="390" height="42" rx="21"/></g>
+<g fill="#dff5fb" opacity=".24" filter="url(#lightGlow)"><ellipse cx="400" cy="330" rx="350" ry="120"/><ellipse cx="1280" cy="330" rx="350" ry="120"/><ellipse cx="2120" cy="330" rx="350" ry="120"/><ellipse cx="2960" cy="330" rx="350" ry="120"/><ellipse cx="3770" cy="330" rx="300" ry="120"/></g>
+<rect y="540" width="4096" height="790" fill="url(#wall)"/>
+<rect y="1330" width="4096" height="718" fill="url(#floor)"/>
+<g stroke="#aab9c1" stroke-width="4" opacity=".42"><path d="M0 710h4096M0 930h4096M0 1150h4096"/><path d="M330 540v790M770 540v790M1210 540v790M1650 540v790M2090 540v790M2530 540v790M2970 540v790M3410 540v790M3850 540v790"/></g>
+<g stroke="#9eadb5" stroke-width="4" opacity=".28"><path d="M2048 1330L1460 2048M2048 1330L1760 2048M2048 1330L2048 2048M2048 1330L2330 2048M2048 1330L2640 2048"/></g>
+
+<!-- zone signage: high on wall and clear of structures -->
+<g filter="url(#softShadow)" font-family="Arial,sans-serif">
+  <g transform="translate(120 620)"><rect width="370" height="118" rx="18" fill="#fbfdfe" stroke="#78909d" stroke-width="7"/><text x="185" y="50" text-anchor="middle" font-size="28" font-weight="900" fill="#184f75">ELEVATED WORK</text><text x="185" y="84" text-anchor="middle" font-size="18" font-weight="700" fill="#667a87">CONTROLLED ACCESS</text></g>
+  <g transform="translate(1860 615)"><rect width="380" height="118" rx="18" fill="#fbfdfe" stroke="#78909d" stroke-width="7"/><text x="190" y="50" text-anchor="middle" font-size="28" font-weight="900" fill="#184f75">MEZZANINE</text><text x="190" y="84" text-anchor="middle" font-size="18" font-weight="700" fill="#667a87">AUTHORISED PERSONNEL</text></g>
+  <g transform="translate(3480 620)"><rect width="390" height="118" rx="18" fill="#fbfdfe" stroke="#78909d" stroke-width="7"/><text x="195" y="50" text-anchor="middle" font-size="28" font-weight="900" fill="#184f75">DROP ZONE</text><text x="195" y="84" text-anchor="middle" font-size="18" font-weight="700" fill="#667a87">KEEP CLEAR BELOW</text></g>
+</g>
+
+<!-- RISK 1: open mezzanine edge around x=520 -->
+<g filter="url(#shadow)">
+  <rect x="210" y="855" width="820" height="92" fill="url(#steel)"/>
+  <rect x="255" y="947" width="62" height="370" fill="#173f5d"/><rect x="922" y="947" width="62" height="370" fill="#173f5d"/>
+  <g fill="#efb528"><rect x="260" y="706" width="330" height="24" rx="12"/><rect x="260" y="706" width="24" height="149"/><rect x="566" y="706" width="24" height="149"/></g>
+  <rect x="590" y="706" width="210" height="24" rx="12" fill="#efb528" opacity=".12"/>
+  <rect x="815" y="706" width="160" height="24" rx="12" fill="#efb528"/>
+  <rect x="951" y="706" width="24" height="149" fill="#efb528"/>
+  <rect x="640" y="794" width="148" height="38" rx="15" fill="#fff2c9"/><text x="714" y="821" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="900" fill="#9c6813">EDGE OPEN</text>
+</g>
+
+<!-- RISK 2: unstable ladder around x=1230 -->
+<g transform="translate(1010 800) rotate(-12 220 350)" filter="url(#shadow)">
+  <rect x="120" y="0" width="32" height="700" rx="16" fill="#d3a31e"/><rect x="300" y="0" width="32" height="700" rx="16" fill="#d3a31e"/>
+  <g stroke="#f7cf5b" stroke-width="23" stroke-linecap="round"><path d="M150 90h150M150 190h150M150 290h150M150 390h150M150 490h150M150 590h150"/></g>
+  <rect x="92" y="678" width="92" height="32" rx="16" fill="#687681"/><rect x="268" y="678" width="104" height="32" rx="16" fill="#687681"/>
+</g>
+<path d="M1085 1584l250 28" stroke="#d74d3f" stroke-width="18" stroke-linecap="round" opacity=".82"/>
+<path d="M1140 1560q85-55 165 5" stroke="#efb528" stroke-width="7" stroke-dasharray="22 15" fill="none" opacity=".8"/>
+
+<!-- RISK 3: worker overreaching around x=1840 -->
+<g transform="translate(1610 730)" filter="url(#shadow)">
+  <circle cx="180" cy="135" r="56" fill="url(#skin)"/><path d="M130 132q50-66 100 0" fill="#422d24"/>
+  <path d="M128 210h104l18 182h-139z" fill="url(#safety)"/><path d="M148 218h62l12 154h-86z" fill="#1d5b79" opacity=".82"/>
+  <path d="M126 245l-115 115" stroke="#cf8d68" stroke-width="36" stroke-linecap="round"/><path d="M224 240l170-78" stroke="#cf8d68" stroke-width="36" stroke-linecap="round"/>
+  <path d="M90 390l-44 190M224 390l78 190" stroke="#264962" stroke-width="44" stroke-linecap="round"/><path d="M18 580h92M272 580h92" stroke="#21313d" stroke-width="30" stroke-linecap="round"/>
+  <path d="M362 122l92-58" stroke="#d94738" stroke-width="18" stroke-linecap="round"/><path d="M444 58l-7 45M444 58l-41 14" stroke="#d94738" stroke-width="15" stroke-linecap="round"/>
+</g>
+
+<!-- central safe MEWP context -->
+<g transform="translate(1975 1190)" filter="url(#shadow)">
+  <rect x="0" y="175" width="520" height="88" rx="26" fill="url(#safety)"/><circle cx="88" cy="290" r="54" fill="#2c3c48"/><circle cx="430" cy="290" r="54" fill="#2c3c48"/>
+  <path d="M115 175l110-160M398 175L285 15M225 15l173 160M285 15L115 175" stroke="#697b86" stroke-width="21"/>
+  <rect x="88" y="0" width="360" height="35" rx="17" fill="#174f73"/>
+</g>
+
+<!-- RISK 4: loose tools on central platform around x=2500 -->
+<g filter="url(#shadow)">
+  <rect x="2220" y="842" width="890" height="94" fill="url(#steel)"/><rect x="2265" y="936" width="66" height="385" fill="#173f5d"/><rect x="2994" y="936" width="66" height="385" fill="#173f5d"/>
+  <g fill="#efb528"><rect x="2280" y="674" width="775" height="24" rx="12"/><rect x="2280" y="674" width="24" height="168"/><rect x="2665" y="674" width="24" height="168"/><rect x="3031" y="674" width="24" height="168"/></g>
+  <g><rect x="2450" y="795" width="142" height="40" rx="9" fill="#8e5731"/><rect x="2485" y="762" width="72" height="32" rx="6" fill="#dfac4d"/><path d="M2624 807l112-66" stroke="#4e5961" stroke-width="18" stroke-linecap="round"/><circle cx="2737" cy="741" r="18" fill="#ee8918"/><rect x="2770" y="786" width="86" height="48" rx="8" fill="#cb6544"/></g>
+</g>
+
+<!-- RISK 5: open self-closing gate around x=3110 -->
+<g transform="translate(3040 680)" filter="url(#shadow)"><rect x="0" y="0" width="28" height="168" fill="#efb528"/><rect x="0" y="0" width="164" height="24" rx="12" fill="#efb528" transform="rotate(-50 14 12)"/><path d="M28 140h175" stroke="#d94b3d" stroke-width="13" stroke-dasharray="18 13"/></g>
+<g transform="translate(2790 555)" filter="url(#shadow)"><circle cx="150" cy="130" r="53" fill="url(#skin)"/><path d="M103 127q47-64 94 0" fill="#422d24"/><rect x="99" y="192" width="104" height="198" rx="35" fill="url(#vest)"/><path d="M110 202h82" stroke="#efb528" stroke-width="18"/><path d="M103 235l-63 125M200 235l76 114" stroke="#cf8d68" stroke-width="34" stroke-linecap="round"/><path d="M118 388l-21 188M188 388l27 188" stroke="#264962" stroke-width="40" stroke-linecap="round"/><path d="M73 576h74M187 576h78" stroke="#21313d" stroke-width="28" stroke-linecap="round"/></g>
+
+<!-- RISK 6: pedestrian beneath active work around x=3650 -->
+<g stroke="#f1c84a" opacity=".92"><path d="M3300 1390h650" stroke-width="16"/><path d="M3300 1460h650" stroke-width="16"/></g>
+<g stroke="#f1c84a" stroke-width="8" opacity=".45"><path d="M3320 1355l92 145M3410 1355l92 145M3500 1355l92 145M3590 1355l92 145M3680 1355l92 145M3770 1355l92 145M3860 1355l92 145"/></g>
+<g transform="translate(3535 1185)" filter="url(#shadow)"><circle cx="120" cy="84" r="46" fill="url(#skin)"/><path d="M80 82q40-57 80 0" fill="#473125"/><rect x="74" y="138" width="92" height="176" rx="32" fill="#2d887e"/><path d="M82 164l-70 116M156 164l76 116" stroke="#cf8d68" stroke-width="30" stroke-linecap="round"/><path d="M90 309l-20 160M152 309l32 160" stroke="#28475f" stroke-width="36" stroke-linecap="round"/><path d="M46 468h70M159 468h70" stroke="#21313d" stroke-width="27" stroke-linecap="round"/></g>
+
+<!-- subtle floor controls -->
+<g font-family="Arial,sans-serif"><rect x="3250" y="1540" width="510" height="70" rx="18" fill="#eef3f5" opacity=".94"/><text x="3505" y="1584" text-anchor="middle" font-size="24" font-weight="900" fill="#4f6675">PEDESTRIAN EXCLUSION AREA</text></g>
+<g stroke="#eef4f7" stroke-width="13" opacity=".72"><path d="M0 1770h4096" stroke-dasharray="105 52"/><path d="M0 1870h4096" stroke-dasharray="130 70"/></g>
+
+<!-- v7.2 production realism pass: service infrastructure, steel detail and industrial texture -->
+<defs>
+  <linearGradient id="v72SteelGlint" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".04"/><stop offset=".45" stop-color="#fff" stop-opacity=".12"/><stop offset=".55" stop-color="#fff" stop-opacity=".02"/><stop offset="1" stop-color="#071722" stop-opacity=".10"/></linearGradient>
+  <linearGradient id="v72FloorTone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9edf3" stop-opacity=".06"/><stop offset="1" stop-color="#071b28" stop-opacity=".13"/></linearGradient>
+  <filter id="v72HeightNoise" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".03 .13" numOctaves="3" seed="27" result="n"/><feColorMatrix in="n" type="matrix" values=".12 0 0 0 0  0 .12 0 0 0  0 0 .12 0 0  0 0 0 .16 0"/></filter>
+  <filter id="v72HeightBlur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+
+<!-- overhead services make the space read like an occupied maintenance facility -->
+<g opacity=".74" fill="none" stroke-linecap="round">
+  <path d="M0 480H4096" stroke="#a33e30" stroke-width="13"/><path d="M0 502H4096" stroke="#5f302b" stroke-width="4"/>
+  <g stroke="#8c9da7" stroke-width="7"><path d="M520 502v42M1380 502v42M2240 502v42M3100 502v42M3900 502v42"/></g>
+  <path d="M420 555h720M1450 555h660M2450 555h650M3360 555h520" stroke="#d3e0e6" stroke-width="4" opacity=".62"/>
+</g>
+<g opacity=".70" filter="url(#softShadow)">
+  <g transform="translate(760 480)"><rect width="112" height="46" rx="6" fill="#2c404b"/><circle cx="88" cy="23" r="13" fill="#0c171d"/><circle cx="88" cy="23" r="5" fill="#86c0d7"/></g>
+  <g transform="translate(3220 480)"><rect width="112" height="46" rx="6" fill="#2c404b"/><circle cx="88" cy="23" r="13" fill="#0c171d"/><circle cx="88" cy="23" r="5" fill="#86c0d7"/></g>
+</g>
+
+<!-- steel platform material response -->
+<g opacity=".9">
+  <rect x="210" y="855" width="820" height="92" fill="url(#v72SteelGlint)"/>
+  <rect x="2220" y="842" width="890" height="94" fill="url(#v72SteelGlint)"/>
+</g>
+<g fill="#b6c2c8" opacity=".48"><circle cx="292" cy="895" r="6"/><circle cx="948" cy="895" r="6"/><circle cx="2298" cy="884" r="6"/><circle cx="3026" cy="884" r="6"/></g>
+
+<!-- realistic access-control and fall-protection details -->
+<g fill="none" stroke="#f3c33d" stroke-width="8" opacity=".88"><path d="M236 735v95M350 735v95M466 735v95"/><path d="M2300 705v110M2420 705v110M2540 705v110M2900 705v110"/></g>
+<g opacity=".90" filter="url(#softShadow)"><rect x="1500" y="590" width="250" height="64" rx="10" fill="#f8fbfc" stroke="#7f929d" stroke-width="5"/><text x="1625" y="630" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="900" fill="#194d70">FALL PROTECTION ZONE</text></g>
+
+<!-- floor surface: tyre wear, scissor-lift tracks and scuffed coating -->
+<rect y="1330" width="4096" height="718" fill="url(#v72FloorTone)"/>
+<g fill="none" stroke-linecap="round"><path d="M80 1890c650-165 1220-155 1810 20" stroke="#23333c" stroke-width="34" opacity=".095"/><path d="M2200 1900c580-160 1170-150 1780 10" stroke="#23333c" stroke-width="34" opacity=".09"/><path d="M1850 1640h760M1900 1680h670" stroke="#2d3d46" stroke-width="8" opacity=".12"/></g>
+<g fill="#d7eef5" opacity=".10" filter="url(#v72HeightBlur)"><ellipse cx="1150" cy="1535" rx="650" ry="65"/><ellipse cx="2840" cy="1525" rx="720" ry="70"/></g>
+
+<!-- equipment grounding shadows -->
+<g fill="#10212b" opacity=".20" filter="url(#v72HeightBlur)"><ellipse cx="1250" cy="1650" rx="220" ry="42"/><ellipse cx="2100" cy="1645" rx="390" ry="52"/><ellipse cx="1810" cy="1370" rx="170" ry="35"/><ellipse cx="2960" cy="1260" rx="155" ry="32"/><ellipse cx="3660" cy="1710" rx="145" ry="32"/></g>
+
+<!-- additional realistic tool tether / exclusion controls -->
+<path d="M2600 786c28 46 18 96-18 135" fill="none" stroke="#1a1f24" stroke-width="7" stroke-dasharray="10 8" opacity=".70"/>
+<g transform="translate(3350 1512)" opacity=".88"><rect width="305" height="48" rx="8" fill="#f9f2da"/><text x="152" y="31" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="#8d6615">EXCLUSION ZONE — NO ENTRY</text></g>
+
+</svg>

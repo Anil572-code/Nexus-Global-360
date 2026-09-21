@@ -1,0 +1,1 @@
+import HazardResults from "@/components/hazard/HazardResults";import DemoTrainingGate from "@/components/demo/DemoTrainingGate";export default function Page(){return <DemoTrainingGate moduleSlug="hazard-perception"><HazardResults/></DemoTrainingGate>}

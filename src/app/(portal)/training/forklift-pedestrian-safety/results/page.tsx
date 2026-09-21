@@ -1,0 +1,1 @@
+import DemoTrainingGate from "@/components/demo/DemoTrainingGate";import DemoTrainingResults from "@/components/demo/DemoTrainingResults";export default function Page(){return <DemoTrainingGate moduleSlug="forklift-pedestrian-safety"><DemoTrainingResults moduleSlug="forklift-pedestrian-safety"/></DemoTrainingGate>}

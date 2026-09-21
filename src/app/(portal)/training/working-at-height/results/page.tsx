@@ -1,0 +1,1 @@
+import DemoTrainingGate from "@/components/demo/DemoTrainingGate";import DemoTrainingResults from "@/components/demo/DemoTrainingResults";export default function Page(){return <DemoTrainingGate moduleSlug="working-at-height"><DemoTrainingResults moduleSlug="working-at-height"/></DemoTrainingGate>}

@@ -1,0 +1,1 @@
+import DemoTrainingGate from "@/components/demo/DemoTrainingGate";import DemoTrainingResults from "@/components/demo/DemoTrainingResults";export default function Page(){return <DemoTrainingGate moduleSlug="fire-safety-emergency-evacuation"><DemoTrainingResults moduleSlug="fire-safety-emergency-evacuation"/></DemoTrainingGate>}

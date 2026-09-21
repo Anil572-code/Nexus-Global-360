@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="2048" viewBox="0 0 4096 2048">
+  <defs>
+    <linearGradient id="ceiling" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26353f"/><stop offset="1" stop-color="#465760"/></linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe7ea"/><stop offset=".6" stop-color="#c7d1d5"/><stop offset="1" stop-color="#aeb9be"/></linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9aa6aa"/><stop offset=".55" stop-color="#747f83"/><stop offset="1" stop-color="#4f595d"/></linearGradient>
+    <linearGradient id="rack" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0a355c"/><stop offset=".5" stop-color="#124f7d"/><stop offset="1" stop-color="#082d50"/></linearGradient>
+    <linearGradient id="orangeBeam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e86418"/><stop offset=".5" stop-color="#f98b22"/><stop offset="1" stop-color="#c94a0e"/></linearGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ddb17a"/><stop offset=".5" stop-color="#bd8044"/><stop offset="1" stop-color="#8e572c"/></linearGradient>
+    <linearGradient id="boxLight" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2cf9c"/><stop offset=".48" stop-color="#d89e62"/><stop offset="1" stop-color="#a96535"/></linearGradient>
+    <linearGradient id="boxSide" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9e6134"/><stop offset="1" stop-color="#73411f"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#70818a"/><stop offset=".45" stop-color="#3b4c55"/><stop offset="1" stop-color="#1e2d35"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9f3ff" stop-opacity=".92"/><stop offset="1" stop-color="#6ca5be" stop-opacity=".68"/></linearGradient>
+    <linearGradient id="vest" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd64b"/><stop offset="1" stop-color="#e69d16"/></linearGradient>
+    <linearGradient id="hiVis" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd85b"/><stop offset="1" stop-color="#e7a610"/></linearGradient>
+    <linearGradient id="forklift" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5c83e"/><stop offset="1" stop-color="#dc9918"/></linearGradient>
+    <radialGradient id="spill" cx="45%" cy="40%" r="65%"><stop offset="0" stop-color="#bdeaf6" stop-opacity=".8"/><stop offset=".55" stop-color="#5cb3d1" stop-opacity=".68"/><stop offset="1" stop-color="#2d748f" stop-opacity=".18"/></radialGradient>
+    <pattern id="wallPanels" width="180" height="520" patternUnits="userSpaceOnUse"><rect width="180" height="520" fill="none"/><path d="M0 0V520 M178 0V520" stroke="#8d9ca3" stroke-width="3" opacity=".2"/><path d="M0 70H180 M0 450H180" stroke="#fff" stroke-width="2" opacity=".12"/></pattern>
+    <pattern id="floorLines" width="220" height="220" patternUnits="userSpaceOnUse"><path d="M0 220L220 0 M-110 220L110 0 M110 220L330 0" stroke="#c7d0d3" stroke-width="2" opacity=".07"/></pattern>
+    <pattern id="antiSlip" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M0 20L20 0" stroke="#fff" stroke-width="2" opacity=".12"/></pattern>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#13202a" flood-opacity=".30"/></filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#15232c" flood-opacity=".22"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="11" result="noise"/><feColorMatrix in="noise" type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .045"/></feComponentTransfer></filter>
+    <filter id="blur"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+
+  <!-- industrial shell -->
+  <rect width="4096" height="560" fill="url(#ceiling)"/>
+  <rect y="520" width="4096" height="650" fill="url(#wall)"/>
+  <rect y="520" width="4096" height="650" fill="url(#wallPanels)" opacity=".96"/>
+  <path d="M0 1090H4096" stroke="#ffffff" stroke-width="3" opacity=".28"/>
+    <rect y="1170" width="4096" height="878" fill="url(#floor)"/>
+  <rect y="1170" width="4096" height="878" fill="url(#floorLines)"/>
+  <g stroke="#d5dde0" stroke-width="2" opacity=".08"><path d="M0 2048L1550 1170"/><path d="M620 2048L1800 1170"/><path d="M1240 2048L2010 1170"/><path d="M1860 2048L2180 1170"/><path d="M2480 2048L2350 1170"/><path d="M3100 2048L2570 1170"/><path d="M3720 2048L2790 1170"/></g>
+  <rect y="1152" width="4096" height="18" fill="#77858a"/>
+
+  <!-- roof trusses and lighting -->
+  <g fill="#162630" opacity=".88">
+    <path d="M0 130H4096V170H0z"/>
+    <path d="M0 425H4096V456H0z"/>
+    <path d="M300 -10L590 560H530L235 -10z"/><path d="M1120 -10L1410 560H1350L1055 -10z"/>
+    <path d="M1940 -10L2230 560H2170L1875 -10z"/><path d="M2760 -10L3050 560H2990L2695 -10z"/>
+    <path d="M3580 -10L3870 560H3810L3515 -10z"/>
+  </g>
+  <g opacity=".94" filter="url(#softShadow)">
+    <rect x="170" y="262" width="430" height="34" rx="17" fill="#f4fbff"/><rect x="950" y="262" width="430" height="34" rx="17" fill="#f4fbff"/>
+    <rect x="1730" y="262" width="430" height="34" rx="17" fill="#f4fbff"/><rect x="2510" y="262" width="430" height="34" rx="17" fill="#f4fbff"/>
+    <rect x="3290" y="262" width="430" height="34" rx="17" fill="#f4fbff"/>
+  </g>
+  <g opacity=".16" filter="url(#blur)" fill="#d8f2ff"><ellipse cx="385" cy="420" rx="390" ry="260"/><ellipse cx="1960" cy="420" rx="420" ry="260"/><ellipse cx="3505" cy="420" rx="390" ry="260"/></g>
+
+  <!-- floor traffic controls -->
+  <path d="M0 1485H4096" stroke="#f6c344" stroke-width="24" stroke-dasharray="150 55" opacity=".95"/>
+  <path d="M0 1530H4096" stroke="#1f292f" stroke-width="7" opacity=".36"/>
+  <path d="M0 1710H4096" stroke="#f2f4f5" stroke-width="12" stroke-dasharray="84 54" opacity=".75"/>
+  <path d="M0 1810H4096" stroke="#f2f4f5" stroke-width="12" stroke-dasharray="84 54" opacity=".75"/>
+
+  <!-- left continuity rack -->
+  <g transform="translate(-190 560)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="520" height="54" fill="url(#rack)"/><rect x="0" y="300" width="520" height="50" fill="url(#orangeBeam)"/><rect x="0" y="600" width="520" height="50" fill="url(#orangeBeam)"/>
+    <rect x="20" y="0" width="34" height="760" fill="#0c4169"/><rect x="470" y="0" width="34" height="760" fill="#0c4169"/>
+  </g>
+
+  <!-- A: emergency exit and obstruction -->
+  <g transform="translate(260 650)" filter="url(#shadow)">
+    <rect x="0" y="0" width="330" height="520" rx="8" fill="#dfe7e9" stroke="#71838c" stroke-width="10"/>
+    <rect x="58" y="95" width="214" height="425" rx="3" fill="#1a6789"/>
+    <rect x="86" y="28" width="160" height="56" rx="8" fill="#1f925c"/>
+    <text x="166" y="67" text-anchor="middle" font-family="Segoe UI,Arial" font-size="31" font-weight="800" fill="#fff">EXIT</text>
+    <rect x="220" y="284" width="18" height="66" rx="9" fill="#e9bd4a"/>
+    <path d="M35 540H295" stroke="#f7f9fa" stroke-width="16" stroke-dasharray="44 20" opacity=".8"/>
+  </g>
+  <g transform="translate(360 1090)" filter="url(#shadow)">
+    <rect x="0" y="120" width="185" height="135" rx="4" fill="url(#box)"/><rect x="145" y="78" width="205" height="177" rx="4" fill="url(#boxLight)"/><rect x="310" y="140" width="185" height="115" rx="4" fill="url(#box)"/>
+    <path d="M0 248H495" stroke="#5f3b21" stroke-width="12"/><path d="M90 120V255 M245 78V255 M405 140V255" stroke="#87552f" stroke-width="3" opacity=".44"/>
+    <path d="M16 142H170M160 102H334M328 160H479" stroke="#e9c394" stroke-width="12" opacity=".52"/>
+    <rect x="24" y="165" width="70" height="34" rx="4" fill="#f5ead9" opacity=".9"/><text x="59" y="188" text-anchor="middle" font-family="Segoe UI,Arial" font-size="14" font-weight="800" fill="#70441f">NGL</text>
+    <rect x="188" y="125" width="84" height="34" rx="4" fill="#f5ead9" opacity=".88"/><text x="230" y="148" text-anchor="middle" font-family="Segoe UI,Arial" font-size="12" font-weight="800" fill="#70441f">FRAGILE</text>
+  </g>
+  <text x="256" y="1608" font-family="Segoe UI,Arial" font-size="30" font-weight="800" fill="#eef3f5" opacity=".7">KEEP EXIT CLEAR</text>
+
+  <!-- storage rack block between A/B -->
+  <g transform="translate(710 630)" filter="url(#softShadow)">
+    <rect width="470" height="50" fill="url(#rack)"/><rect y="285" width="470" height="44" fill="url(#orangeBeam)"/><rect y="575" width="470" height="44" fill="url(#orangeBeam)"/>
+    <rect x="12" width="30" height="720" fill="#0d426c"/><rect x="428" width="30" height="720" fill="#0d426c"/>
+    <g fill="url(#boxLight)"><rect x="62" y="72" width="112" height="174"/><rect x="188" y="88" width="105" height="158"/><rect x="307" y="64" width="105" height="182"/><rect x="54" y="367" width="120" height="170"/><rect x="190" y="350" width="108" height="187"/><rect x="315" y="378" width="96" height="159"/></g>
+    <g stroke="#8d5a32" stroke-width="3" opacity=".34"><path d="M118 72V246M240 88V246M359 64V246M114 367V537M244 350V537M363 378V537"/></g>
+  </g>
+
+  <!-- B: spill + cleaning station -->
+  <g transform="translate(1050 1270)">
+    <path d="M-10 132C15 58 108 35 170 58C232 17 336 52 365 115C387 164 319 200 239 195C182 224 58 211 5 174C-9 164-16 149-10 132Z" fill="url(#spill)"/><path d="M82 94C128 67 215 69 261 94C231 120 137 125 82 94Z" fill="#ecfbff" opacity=".42"/><path d="M28 157C96 186 248 189 333 149" fill="none" stroke="#91d1e4" stroke-width="8" opacity=".25"/>
+    <g transform="translate(260 -160)" filter="url(#shadow)"><path d="M0 215L82 0L164 215Z" fill="url(#hiVis)" stroke="#303a40" stroke-width="8"/><text x="82" y="108" text-anchor="middle" font-family="Arial" font-size="65" font-weight="900" fill="#303a40">!</text><text x="82" y="168" text-anchor="middle" font-family="Segoe UI,Arial" font-size="17" font-weight="900" fill="#303a40">WET FLOOR</text></g>
+  </g>
+  <g transform="translate(1285 720)" filter="url(#softShadow)"><rect width="270" height="380" rx="12" fill="#e8eef0" stroke="#809199" stroke-width="8"/><rect x="28" y="38" width="214" height="86" rx="8" fill="#0b4a78"/><text x="135" y="92" text-anchor="middle" font-family="Segoe UI,Arial" font-size="23" font-weight="800" fill="#fff">SPILL STATION</text><circle cx="80" cy="206" r="38" fill="#f4b53b"/><rect x="144" y="172" width="74" height="120" rx="12" fill="#d07a25"/><rect x="34" y="305" width="198" height="26" rx="13" fill="#aebac0"/></g>
+
+  <!-- neutral packing bench -->
+  <g transform="translate(1455 900)" filter="url(#softShadow)"><rect x="0" y="0" width="280" height="38" rx="4" fill="#44545d"/><rect x="24" y="38" width="28" height="285" fill="#44545d"/><rect x="228" y="38" width="28" height="285" fill="#44545d"/><rect x="38" y="-125" width="105" height="120" fill="url(#boxLight)"/><rect x="158" y="-90" width="94" height="85" fill="url(#box)"/><rect x="75" y="58" width="130" height="28" rx="6" fill="#e4e9eb"/></g>
+
+  <!-- C: unstable pallet stack -->
+  <g transform="translate(1660 810)" filter="url(#shadow)">
+    <g>
+      <rect x="0" y="520" width="510" height="42" rx="3" fill="#916137"/><rect x="24" y="566" width="462" height="22" rx="2" fill="#5f3d22"/>
+      <rect x="20" y="530" width="85" height="66" fill="#6e4728"/><rect x="212" y="530" width="85" height="66" fill="#6e4728"/><rect x="405" y="530" width="70" height="66" fill="#6e4728"/>
+      <rect x="28" y="358" width="214" height="162" rx="4" fill="url(#boxLight)"/><polygon points="242,358 262,346 262,503 242,520" fill="url(#boxSide)" opacity=".78"/>
+      <rect x="256" y="358" width="220" height="162" rx="4" fill="url(#box)"/><polygon points="476,358 493,347 493,502 476,520" fill="url(#boxSide)" opacity=".72"/>
+      <g transform="rotate(-6 224 285)"><rect x="54" y="204" width="215" height="158" rx="4" fill="url(#box)"/><rect x="284" y="204" width="190" height="158" rx="4" fill="url(#boxLight)"/><path d="M68 229H255M298 230H459" stroke="#edc89b" stroke-width="13" opacity=".48"/></g>
+      <g transform="rotate(13 277 130)"><rect x="160" y="46" width="224" height="158" rx="4" fill="url(#boxLight)"/><path d="M176 76H365" stroke="#efd0a9" stroke-width="13" opacity=".5"/><rect x="184" y="112" width="70" height="34" rx="4" fill="#f6ead8" opacity=".9"/><text x="219" y="135" text-anchor="middle" font-family="Segoe UI,Arial" font-size="12" font-weight="800" fill="#70441f">HEAVY</text></g>
+      <g stroke="#80512e" stroke-width="4" opacity=".35"><path d="M136 358V520M366 358V520M162 204V362M378 204V362"/></g>
+      <path d="M357 84l62 -28 -20 70" fill="none" stroke="#d84535" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="50" y="602" width="410" height="14" fill="#f4c344" opacity=".75"/>
+    </g>
+  </g>
+
+  <!-- center safe rack + clock -->
+  <g transform="translate(2140 590)"><circle cx="110" cy="110" r="74" fill="#f7fafb" stroke="#647984" stroke-width="11" filter="url(#softShadow)"/><path d="M110 110V61M110 110L150 134" stroke="#274b63" stroke-width="11" stroke-linecap="round"/>
+    <rect x="210" y="0" width="560" height="52" fill="url(#rack)"/><rect x="210" y="325" width="560" height="48" fill="url(#orangeBeam)"/><rect x="210" y="650" width="560" height="48" fill="url(#orangeBeam)"/><rect x="222" width="32" height="790" fill="#0c4169"/><rect x="724" width="32" height="790" fill="#0c4169"/>
+    <g fill="url(#boxLight)" opacity=".92"><rect x="278" y="78" width="128" height="202"/><rect x="423" y="100" width="120" height="180"/><rect x="558" y="72" width="125" height="208"/><rect x="285" y="420" width="125" height="182"/><rect x="430" y="402" width="116" height="200"/><rect x="565" y="433" width="115" height="169"/></g>
+  </g>
+
+  <!-- D: worker without PPE -->
+  <g transform="translate(2405 930)" filter="url(#shadow)">
+    <circle cx="120" cy="70" r="55" fill="#d59a73"/><path d="M70 65Q120 18 170 65" fill="#4f382b"/>
+    <rect x="58" y="126" width="124" height="255" rx="42" fill="#24577f"/><path d="M65 167H175" stroke="#c8d8e3" stroke-width="10" opacity=".28"/><path d="M64 136L87 126L120 230L153 126L177 138L163 320H76Z" fill="url(#vest)" opacity=".92"/><path d="M78 210H162" stroke="#f8f1cf" stroke-width="10" opacity=".82"/><rect x="122" y="247" width="30" height="35" rx="4" fill="#d89817" opacity=".7"/>
+    <rect x="33" y="158" width="35" height="205" rx="16" fill="#d59a73" transform="rotate(8 33 158)"/><rect x="172" y="158" width="35" height="205" rx="16" fill="#d59a73" transform="rotate(-9 172 158)"/>
+    <rect x="74" y="370" width="44" height="230" rx="17" fill="#263d53"/><rect x="128" y="370" width="44" height="230" rx="17" fill="#263d53"/><rect x="62" y="594" width="72" height="29" rx="12" fill="#1f292f"/><rect x="116" y="594" width="72" height="29" rx="12" fill="#1f292f"/>
+    <path d="M67 143H174" stroke="#f2c33f" stroke-width="8" opacity=".85"/>
+  </g>
+  <g transform="translate(2695 950)" filter="url(#softShadow)"><rect width="255" height="224" rx="14" fill="#eef3f5" stroke="#81939c" stroke-width="8"/><path d="M78 93Q128 26 178 93" fill="#f1bc3b"/><rect x="88" y="92" width="80" height="20" rx="10" fill="#f1bc3b"/><text x="128" y="157" text-anchor="middle" font-family="Segoe UI,Arial" font-size="22" font-weight="900" fill="#214963">PPE REQUIRED</text><text x="128" y="188" text-anchor="middle" font-family="Segoe UI,Arial" font-size="15" font-weight="700" fill="#677a85">OPERATIONS ZONE</text></g>
+
+  <!-- E: unsafe manual lift -->
+  <g transform="translate(2940 1000)" filter="url(#shadow)">
+    <rect x="210" y="300" width="195" height="140" rx="4" fill="url(#boxLight)"/><path d="M210 372H405" stroke="#a66c37" stroke-width="4" opacity=".45"/><path d="M228 326H387" stroke="#efd0a6" stroke-width="13" opacity=".52"/><rect x="235" y="386" width="78" height="30" rx="4" fill="#f5ead9" opacity=".88"/><text x="274" y="407" text-anchor="middle" font-family="Segoe UI,Arial" font-size="12" font-weight="800" fill="#70441f">18 KG</text>
+    <circle cx="120" cy="68" r="48" fill="#d59a73"/><path d="M78 63Q120 25 163 63" fill="#26333b"/>
+    <path d="M112 119Q186 169 216 257" fill="none" stroke="#ef981f" stroke-width="76" stroke-linecap="round"/><path d="M124 131Q174 169 194 219" fill="none" stroke="#ffd54f" stroke-width="38" stroke-linecap="round" opacity=".96"/><path d="M139 163Q174 187 188 213" fill="none" stroke="#f7f3d2" stroke-width="8" stroke-linecap="round" opacity=".9"/>
+    <path d="M142 146Q241 198 295 294" fill="none" stroke="#d59a73" stroke-width="34" stroke-linecap="round"/>
+    <path d="M166 226Q88 330 74 424" fill="none" stroke="#253d54" stroke-width="48" stroke-linecap="round"/><path d="M179 238Q228 340 252 433" fill="none" stroke="#253d54" stroke-width="48" stroke-linecap="round"/>
+    <path d="M28 462H125M220 462H312" stroke="#1f292f" stroke-width="25" stroke-linecap="round"/>
+    <path d="M86 118L40 30" stroke="#d84234" stroke-width="12" stroke-linecap="round"/><path d="M40 30L65 38M40 30L43 56" stroke="#d84234" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <!-- F: forklift conflict area -->
+  <g transform="translate(3370 930)" filter="url(#shadow)">
+    <rect x="112" y="180" width="320" height="245" rx="38" fill="url(#forklift)"/><path d="M132 205H410" stroke="#fff3b5" stroke-width="10" opacity=".28"/><rect x="205" y="48" width="176" height="166" rx="19" fill="url(#metal)"/><rect x="230" y="74" width="124" height="110" rx="6" fill="url(#glass)"/><path d="M230 74L354 184" stroke="#fff" stroke-width="8" opacity=".18"/><rect x="250" y="193" width="70" height="20" rx="8" fill="#17252c"/><circle cx="351" cy="31" r="18" fill="#f2791b"/><circle cx="351" cy="31" r="8" fill="#fff2a6"/>
+    <rect x="60" y="40" width="24" height="450" fill="#2b3942"/><rect x="0" y="458" width="190" height="28" fill="#2b3942"/><rect x="0" y="503" width="190" height="21" fill="#2b3942"/>
+    <circle cx="183" cy="438" r="73" fill="#232d33"/><circle cx="379" cy="438" r="73" fill="#232d33"/><circle cx="183" cy="438" r="31" fill="#88949b"/><circle cx="379" cy="438" r="31" fill="#88949b"/>
+    <rect x="252" y="240" width="120" height="42" rx="6" fill="#fff" opacity=".18"/><text x="312" y="269" text-anchor="middle" font-family="Segoe UI,Arial" font-size="18" font-weight="900" fill="#76540c">NGL</text><circle cx="418" cy="229" r="19" fill="#fff2a7" opacity=".88"/><circle cx="418" cy="229" r="34" fill="#fff2a7" opacity=".12"/>
+  </g>
+  <g transform="translate(3720 1050)" filter="url(#shadow)">
+    <circle cx="90" cy="55" r="44" fill="#d59a73"/><path d="M54 54Q90 18 126 54" fill="#26333b"/><rect x="43" y="105" width="96" height="218" rx="34" fill="#2d766e"/><rect x="52" y="146" width="78" height="28" rx="6" fill="#f1c23d" opacity=".9"/>
+    <path d="M52 171L0 286M130 171L185 272" stroke="#d59a73" stroke-width="30" stroke-linecap="round"/><path d="M67 315L26 492M118 315L168 492" stroke="#22394f" stroke-width="38" stroke-linecap="round"/><path d="M0 503H72M143 503H214" stroke="#1f292f" stroke-width="23" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(3620 1560)"><rect x="0" y="0" width="470" height="180" fill="url(#antiSlip)" opacity=".65"/><path d="M0 15H470M0 95H470" stroke="#f7f8f9" stroke-width="20" stroke-dasharray="66 34" opacity=".92"/><path d="M250 0V180" stroke="#e24436" stroke-width="13" opacity=".82"/></g>
+  <g transform="translate(3480 720)" opacity=".9"><rect width="390" height="74" rx="10" fill="#ffffff" stroke="#8fa0a7" stroke-width="5"/><text x="195" y="48" text-anchor="middle" font-family="Segoe UI,Arial" font-size="24" font-weight="900" fill="#17496e">FORKLIFT OPERATING AREA</text></g>
+
+  <!-- v4.1 professional realism pass: depth, equipment and wayfinding -->
+  <g opacity=".9" filter="url(#softShadow)">
+    <rect x="1820" y="650" width="250" height="118" rx="10" fill="#f8fafb" stroke="#8ca0ab" stroke-width="5"/><text x="1945" y="698" text-anchor="middle" font-family="Segoe UI,Arial" font-size="19" font-weight="900" fill="#17496e">WAREHOUSE SAFETY</text><text x="1945" y="730" text-anchor="middle" font-family="Segoe UI,Arial" font-size="13" font-weight="700" fill="#687a84">KEEP AISLES CLEAR</text>
+    <rect x="3060" y="665" width="250" height="118" rx="10" fill="#f8fafb" stroke="#8ca0ab" stroke-width="5"/><text x="3185" y="712" text-anchor="middle" font-family="Segoe UI,Arial" font-size="18" font-weight="900" fill="#17496e">PEDESTRIAN ROUTE</text><path d="M3110 742H3260" stroke="#23a36b" stroke-width="11" stroke-linecap="round"/>
+  </g>
+  <g opacity=".72">
+    <rect x="650" y="1190" width="26" height="220" rx="12" fill="#f2bb31"/><rect x="640" y="1188" width="46" height="30" rx="8" fill="#303b42"/>
+    <rect x="2820" y="1200" width="26" height="205" rx="12" fill="#f2bb31"/><rect x="2810" y="1198" width="46" height="30" rx="8" fill="#303b42"/>
+    <rect x="3325" y="1200" width="26" height="205" rx="12" fill="#f2bb31"/><rect x="3315" y="1198" width="46" height="30" rx="8" fill="#303b42"/>
+  </g>
+  <g opacity=".12" fill="#e8f4f8"><ellipse cx="920" cy="1660" rx="620" ry="78"/><ellipse cx="2420" cy="1635" rx="680" ry="82"/><ellipse cx="3570" cy="1650" rx="470" ry="70"/></g>
+  <path d="M40 1910H4056" stroke="#111d24" stroke-width="2" opacity=".22"/>
+
+  <!-- ambient practical details -->
+  <g opacity=".78"><rect x="1510" y="560" width="110" height="48" rx="7" fill="#f4b839"/><text x="1565" y="592" text-anchor="middle" font-family="Segoe UI,Arial" font-size="18" font-weight="900" fill="#2c3941">AISLE 04</text><rect x="2875" y="600" width="120" height="48" rx="7" fill="#f4b839"/><text x="2935" y="632" text-anchor="middle" font-family="Segoe UI,Arial" font-size="18" font-weight="900" fill="#2c3941">AISLE 07</text></g>
+  <g fill="#55656e" opacity=".45"><circle cx="160" cy="705" r="8"/><circle cx="965" cy="806" r="8"/><circle cx="2300" cy="745" r="8"/><circle cx="3240" cy="690" r="8"/></g>
+
+  <!-- seamless edge framing -->
+  <g opacity=".9"><rect x="0" y="600" width="35" height="760" fill="#0c4169"/><rect x="4061" y="600" width="35" height="760" fill="#0c4169"/></g>
+
+  <!-- v4.1 realism contract: FORKLIFT CABIN / PACKAGE LABELS / DEPTH PASS -->
+  <!-- subtle global material grain -->
+  <rect width="4096" height="2048" filter="url(#grain)" opacity=".7"/>
+
+  <!-- v7.2 production realism pass: industrial services, material texture, depth cues -->
+  <defs>
+    <linearGradient id="v72ConcreteSheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".10"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#0b1d28" stop-opacity=".14"/></linearGradient>
+    <linearGradient id="v72FloorReflection" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dff2f8" stop-opacity=".10"/><stop offset="1" stop-color="#11232d" stop-opacity=".02"/></linearGradient>
+    <filter id="v72Roughness" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".025 .12" numOctaves="3" seed="42" result="n"/><feColorMatrix in="n" type="matrix" values=".15 0 0 0 0  0 .15 0 0 0  0 0 .15 0 0  0 0 0 .18 0"/></filter>
+    <filter id="v72Soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+
+  <!-- real warehouse service infrastructure -->
+  <g opacity=".72" fill="none" stroke-linecap="round">
+    <path d="M0 485H4096" stroke="#9a3a2d" stroke-width="13"/><path d="M0 505H4096" stroke="#542c29" stroke-width="4"/>
+    <g stroke="#8ea0aa" stroke-width="7"><path d="M420 505V548M1240 505V548M2060 505V548M2880 505V548M3700 505V548"/></g>
+    <g stroke="#d8e5ea" stroke-width="3" opacity=".7"><path d="M360 545H680M1180 545H1510M2010 545H2320M2810 545H3120M3620 545H3970"/></g>
+  </g>
+  <g opacity=".78" filter="url(#softShadow)">
+    <g transform="translate(1770 470)"><rect width="116" height="48" rx="6" fill="#283b46"/><circle cx="92" cy="24" r="13" fill="#0d171d"/><circle cx="92" cy="24" r="5" fill="#8ac7df"/><path d="M10 48l-22 32" stroke="#6b7d86" stroke-width="8"/></g>
+    <g transform="translate(3320 470)"><rect width="116" height="48" rx="6" fill="#283b46"/><circle cx="92" cy="24" r="13" fill="#0d171d"/><circle cx="92" cy="24" r="5" fill="#8ac7df"/><path d="M10 48l-22 32" stroke="#6b7d86" stroke-width="8"/></g>
+  </g>
+
+  <!-- material variation and wall ageing -->
+  <rect y="520" width="4096" height="650" fill="url(#v72ConcreteSheen)" opacity=".72"/>
+  <g fill="#59676d" opacity=".10"><ellipse cx="540" cy="900" rx="120" ry="34"/><ellipse cx="1740" cy="830" rx="185" ry="24"/><ellipse cx="3060" cy="950" rx="155" ry="30"/></g>
+  <g stroke="#5d6a70" stroke-width="7" opacity=".09"><path d="M980 590l55 420M1880 550l-35 570M3330 600l68 410"/></g>
+
+  <!-- floor realism: tyre arcs, pallet drag marks, oil wear and soft reflections -->
+  <rect y="1170" width="4096" height="878" fill="url(#v72FloorReflection)"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M120 1880C760 1730 1410 1760 1960 1940" stroke="#222e34" stroke-width="34" opacity=".10"/>
+    <path d="M2400 1900C2870 1730 3480 1725 4030 1860" stroke="#222e34" stroke-width="38" opacity=".085"/>
+    <path d="M520 2010C1180 1860 1760 1860 2350 2010" stroke="#e4eef1" stroke-width="16" opacity=".055"/>
+    <path d="M2650 1695h430M2680 1725h360" stroke="#29363c" stroke-width="8" opacity=".13"/>
+  </g>
+  <g opacity=".12" filter="url(#v72Soft)" fill="#d7eef6"><ellipse cx="1180" cy="1420" rx="520" ry="70"/><ellipse cx="2750" cy="1410" rx="600" ry="75"/></g>
+
+  <!-- warehouse micro-details: rack hardware, carton tape and pallet wear -->
+  <g fill="#aebac0" opacity=".52">
+    <circle cx="740" cy="720" r="5"/><circle cx="1138" cy="720" r="5"/><circle cx="2380" cy="710" r="5"/><circle cx="2860" cy="710" r="5"/><circle cx="4058" cy="720" r="5"/>
+  </g>
+  <g stroke="#77502e" stroke-width="5" opacity=".24"><path d="M425 1240v100M540 1208v130M1110 800v160M2380 770v180"/></g>
+  <g stroke="#efd2a5" stroke-width="8" opacity=".35"><path d="M735 758h115M918 780h110M2430 744h115M2585 760h105"/></g>
+
+  <!-- grounding shadows make people/equipment sit in the environment -->
+  <g fill="#14232c" opacity=".20" filter="url(#v72Soft)"><ellipse cx="2520" cy="1585" rx="150" ry="35"/><ellipse cx="3130" cy="1575" rx="180" ry="38"/><ellipse cx="3690" cy="1540" rx="350" ry="54"/><ellipse cx="820" cy="1460" rx="260" ry="34"/></g>
+
+</svg>

@@ -1,0 +1,2207 @@
+:global(.portal-content-v6):has(.page) {
+  max-width: 1540px;
+  padding-top: 12px;
+  padding-bottom: 14px;
+}
+
+.page {
+  height: min(660px, calc(100dvh - 102px));
+  min-height: 590px;
+  display: grid;
+  grid-template-rows: 40px minmax(0, 1fr);
+  gap: 8px;
+  overflow: hidden;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-feature-settings: "cv02","cv03","cv04","cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.pageHeader h1 {
+  margin: 0;
+  color: #0f3953;
+  font-size: 25px;
+  font-weight: 820;
+  line-height: 1;
+  letter-spacing: -.028em;
+}
+
+.pageHeader p {
+  margin: 5px 0 0;
+  color: #5e7380;
+  font-size: 10.5px;
+  font-weight: 560;
+}
+
+.eyebrow {
+  display: block;
+  color: #0a5b86;
+  font-size: 8.5px;
+  font-weight: 850;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+.dashboard {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: 66px minmax(0, 1fr);
+  gap: 8px;
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.kpiCard,
+.progressionCard,
+.nextCard,
+.queueCard,
+.statusCard {
+  min-width: 0;
+  border: 1px solid #dce6ec;
+  border-radius: 11px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(18, 52, 76, .026);
+}
+
+.kpiCard {
+  padding: 9px 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kpiCard > span {
+  color: #536b79;
+  font-size: 8.5px;
+  font-weight: 850;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.kpiValueRow {
+  min-width: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.kpiValueRow strong {
+  color: #0f3b57;
+  font-size: 27px;
+  font-weight: 820;
+  line-height: 1;
+  letter-spacing: -.028em;
+}
+
+.kpiValueRow small {
+  min-width: 0;
+  max-width: 62%;
+  overflow: hidden;
+  color: #5f7481;
+  font-size: 8.5px;
+  font-weight: 580;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.workspaceGrid {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.72fr) minmax(306px, .68fr);
+  gap: 8px;
+}
+
+.progressionCard {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 11px 13px 9px;
+}
+
+.sectionHead,
+.statusHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sectionHead h2,
+.sideHeading h2,
+.statusHeader h2 {
+  margin: 2px 0 0;
+  color: #103b56;
+  font-size: 15px;
+  font-weight: 820;
+  line-height: 1.2;
+  letter-spacing: -.01em;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #586f7d;
+  font-size: 8px;
+  font-weight: 720;
+  white-space: nowrap;
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legend i {
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.legendComplete {
+  background: #2a9567;
+}
+
+.legendNext {
+  border: 1.5px solid #e77a16;
+  background: #fff8f0;
+}
+
+.legendPending {
+  border: 1px solid #d4dee4;
+  background: #eef3f6;
+}
+
+.chartArea {
+  min-height: 0;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.chartScale {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  align-items: end;
+  padding-bottom: 68px;
+  color: #637b89;
+  font-size: 8px;
+  font-weight: 720;
+  text-align: right;
+}
+
+.chartPlot {
+  position: relative;
+  min-height: 0;
+}
+
+.gridLines {
+  position: absolute;
+  inset: 0 0 68px;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  pointer-events: none;
+}
+
+.gridLines i {
+  border-bottom: 1px solid #edf1f4;
+}
+
+.columns {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.column {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) 64px;
+  gap: 4px;
+}
+
+.scoreLane {
+  position: relative;
+  min-height: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0 auto;
+  width: min(74%, 82px);
+  border-radius: 8px 8px 4px 4px;
+  overflow: visible;
+}
+
+.scoreLane::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid #edf2f5;
+  background: linear-gradient(180deg, rgba(246,250,252,.64), rgba(248,251,252,.28));
+}
+
+.scoreLaneCompleted::before {
+  border-color: #e3ece8;
+  background: linear-gradient(180deg, rgba(242,249,245,.72), rgba(248,252,250,.36));
+}
+
+.scoreLaneRecommended::before {
+  border: 1.5px dashed #e8892d;
+  background: #fffbf7;
+}
+
+.scoreLanePending::before {
+  border-color: #e6edf1;
+  background: #f9fbfc;
+}
+
+.completedBar {
+  position: relative;
+  z-index: 2;
+  width: 58%;
+  min-height: 8px;
+  max-height: calc(100% - 14px);
+  border-radius: 5px 5px 3px 3px;
+  background: linear-gradient(180deg, #49ae7a 0%, #248d5e 100%);
+  box-shadow: 0 6px 14px rgba(36, 141, 94, .10);
+}
+
+.scoreLabel {
+  position: absolute;
+  z-index: 4;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #174c38;
+  font-size: 10px;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.emptyScoreMessage {
+  position: relative;
+  z-index: 3;
+  align-self: flex-end;
+  width: calc(100% - 10px);
+  margin-bottom: 8px;
+  padding: 6px 4px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.scoreLaneRecommended .emptyScoreMessage {
+  border: 1px solid #f2c99f;
+  background: #fff6ec;
+}
+
+.scoreLanePending .emptyScoreMessage {
+  background: #f1f5f7;
+}
+
+.emptyScoreMessage span,
+.emptyScoreMessage small {
+  display: block;
+}
+
+.emptyScoreMessage span {
+  color: #4b6575;
+  font-size: 8px;
+  font-weight: 850;
+}
+
+.scoreLaneRecommended .emptyScoreMessage span {
+  color: #ae5710;
+}
+
+.emptyScoreMessage small {
+  margin-top: 2px;
+  color: #7b8d97;
+  font-size: 6.5px;
+  font-weight: 650;
+}
+
+.columnLabel {
+  min-width: 0;
+  text-align: center;
+}
+
+.columnLabel b {
+  display: inline-grid;
+  min-width: 22px;
+  height: 19px;
+  place-items: center;
+  border-radius: 5px;
+  background: #f2f6f8;
+  color: #415f72;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.columnLabel strong,
+.columnLabel span {
+  display: block;
+  overflow: hidden;
+}
+
+.columnLabel strong {
+  margin-top: 4px;
+  color: #1d435c;
+  font-size: 8.5px;
+  font-weight: 780;
+  line-height: 1.22;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.columnLabel span {
+  width: fit-content;
+  max-width: 100%;
+  margin: 3px auto 0;
+  padding: 2px 5px;
+  border-radius: 999px;
+  font-size: 6.7px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.completedStatus {
+  background: #edf8f2;
+  color: #2f7c59;
+}
+
+.recommendedStatus {
+  background: #fff5e9;
+  color: #a7550f;
+}
+
+.pendingStatus {
+  background: #f2f5f7;
+  color: #687c87;
+}
+
+.chartFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 5px;
+  color: #607683;
+  font-size: 7.6px;
+  font-weight: 560;
+}
+
+.chartFooter a {
+  flex: 0 0 auto;
+  color: #0b638f;
+  font-size: 7.8px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.sideStack {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(0, .92fr) minmax(0, 1.02fr) minmax(0, .72fr);
+  gap: 8px;
+}
+
+.nextCard,
+.queueCard,
+.statusCard {
+  min-height: 0;
+  padding: 10px 11px;
+}
+
+.nextCard {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.nextMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.nextMeta > b {
+  color: #075b87;
+  font-size: 8.2px;
+  font-weight: 850;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.nextMeta > span {
+  padding: 3px 6px;
+  border: 1px solid #ecdccf;
+  border-radius: 999px;
+  background: #fff7ef;
+  color: #9e5010;
+  font-size: 7.2px;
+  font-weight: 750;
+}
+
+.nextCard h2 {
+  margin: 6px 0 0;
+  color: #103b56;
+  font-size: 16px;
+  font-weight: 820;
+  line-height: 1.15;
+}
+
+.nextCard p {
+  margin: 7px 0 0;
+  color: #576e7b;
+  font-size: 9px;
+  font-weight: 540;
+  line-height: 1.48;
+}
+
+.tags {
+  display: flex;
+  gap: 5px;
+  margin-top: 7px;
+}
+
+.tags span {
+  padding: 3px 6px;
+  border: 1px solid #e2e9ed;
+  border-radius: 999px;
+  background: #f8fafb;
+  color: #566e7c;
+  font-size: 7px;
+  font-weight: 720;
+}
+
+.primaryAction {
+  width: fit-content;
+  min-height: 31px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  padding: 0 11px;
+  border-radius: 7px;
+  background: #ef8217;
+  color: #ffffff;
+  font-size: 8.5px;
+  font-weight: 820;
+  text-decoration: none;
+  box-shadow: 0 4px 9px rgba(194,91,10,.10);
+}
+
+.queueCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.queueList {
+  min-height: 0;
+  margin-top: 7px;
+  display: grid;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.queueRow {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 23px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 7px;
+  border-top: 1px solid #edf1f3;
+}
+
+.queueRow:first-child {
+  border-top: 0;
+}
+
+.queueRow > b {
+  width: 23px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: #f2f6f8;
+  color: #3d5e72;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.queueRow > div {
+  min-width: 0;
+}
+
+.queueRow strong,
+.queueRow span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.queueRow strong {
+  color: #1c435c;
+  font-size: 8.5px;
+  font-weight: 780;
+}
+
+.queueRow span {
+  margin-top: 2px;
+  color: #6b7f8b;
+  font-size: 7px;
+}
+
+.queueRow em {
+  color: #5f7480;
+  font-size: 6.8px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.queueEmpty {
+  display: grid;
+  place-items: center;
+  color: #667b87;
+  font-size: 7.5px;
+}
+
+.statusHeader > strong {
+  color: #0d4d75;
+  font-size: 20px;
+  font-weight: 830;
+}
+
+.progressTrack {
+  height: 5px;
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e9eff2;
+}
+
+.progressTrack i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #268b62;
+}
+
+.statusMetrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.statusMetrics div {
+  padding: 5px 6px;
+  border: 1px solid #e7edf0;
+  border-radius: 6px;
+  background: #fafcfd;
+}
+
+.statusMetrics strong,
+.statusMetrics span {
+  display: block;
+}
+
+.statusMetrics strong {
+  color: #153f5a;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.statusMetrics span {
+  margin-top: 1px;
+  color: #687d89;
+  font-size: 7px;
+  font-weight: 620;
+}
+
+@media (max-width: 1260px), (max-height: 690px) {
+  :global(.portal-content-v6):has(.page) {
+    padding-top: 14px;
+    padding-bottom: 22px;
+  }
+
+  .page {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .dashboard {
+    grid-template-rows: auto auto;
+  }
+
+  .kpiGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workspaceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .progressionCard {
+    min-height: 440px;
+  }
+
+  .sideStack {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .kpiGrid,
+  .sideStack {
+    grid-template-columns: 1fr;
+  }
+
+  .columns {
+    gap: 5px;
+  }
+
+  .legend {
+    display: none;
+  }
+}
+
+/* ========================================================================== */
+/* R20 READABILITY FREEZE                                                     */
+/* Typography / contrast only. Layout, data and interaction stay unchanged.   */
+/* ========================================================================== */
+
+.pageHeader h1 {
+  color: #0a3550;
+  font-size: 27px;
+  font-weight: 840;
+}
+
+.pageHeader p {
+  color: #506977;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.eyebrow {
+  color: #075983;
+  font-size: 9.5px;
+  font-weight: 880;
+  letter-spacing: .072em;
+}
+
+.kpiCard > span {
+  color: #496371;
+  font-size: 9.25px;
+  font-weight: 880;
+}
+
+.kpiValueRow strong {
+  color: #0b3854;
+  font-size: 29px;
+  font-weight: 840;
+}
+
+.kpiValueRow small {
+  color: #506876;
+  font-size: 9.25px;
+  font-weight: 620;
+}
+
+.sectionHead h2,
+.sideHeading h2,
+.statusHeader h2 {
+  color: #0b3954;
+  font-size: 16px;
+  font-weight: 840;
+}
+
+.legend {
+  color: #4d6674;
+  font-size: 8.75px;
+  font-weight: 760;
+}
+
+.chartScale {
+  color: #58717f;
+  font-size: 8.75px;
+  font-weight: 760;
+}
+
+.scoreLabel {
+  color: #104a34;
+  font-size: 10.75px;
+  font-weight: 880;
+}
+
+.emptyScoreMessage span {
+  color: #3f5c6c;
+  font-size: 8.75px;
+  font-weight: 880;
+}
+
+.scoreLaneRecommended .emptyScoreMessage span {
+  color: #9a4a0c;
+}
+
+.emptyScoreMessage small {
+  color: #667d89;
+  font-size: 7.2px;
+  font-weight: 690;
+}
+
+.columnLabel b {
+  color: #36566a;
+  font-size: 7.6px;
+  font-weight: 840;
+}
+
+.columnLabel strong {
+  color: #143d57;
+  font-size: 9.35px;
+  font-weight: 810;
+  line-height: 1.24;
+}
+
+.columnLabel span {
+  font-size: 7.25px;
+  font-weight: 760;
+}
+
+.completedStatus {
+  color: #236d4c;
+}
+
+.recommendedStatus {
+  color: #924708;
+}
+
+.pendingStatus {
+  color: #576f7d;
+}
+
+.chartFooter {
+  color: #516a78;
+  font-size: 8.25px;
+  font-weight: 610;
+}
+
+.chartFooter a {
+  color: #075b87;
+  font-size: 8.4px;
+  font-weight: 840;
+}
+
+.nextMeta > b {
+  color: #05557e;
+  font-size: 9px;
+  font-weight: 880;
+}
+
+.nextMeta > span {
+  color: #8e4308;
+  font-size: 7.75px;
+  font-weight: 790;
+}
+
+.nextCard h2 {
+  color: #0b3853;
+  font-size: 17px;
+  font-weight: 840;
+}
+
+.nextCard p {
+  color: #4e6674;
+  font-size: 9.8px;
+  font-weight: 590;
+  line-height: 1.48;
+}
+
+.tags span {
+  color: #4d6674;
+  font-size: 7.5px;
+  font-weight: 760;
+}
+
+.primaryAction {
+  font-size: 9px;
+  font-weight: 840;
+}
+
+.queueRow > b {
+  color: #34566b;
+  font-size: 7.6px;
+  font-weight: 840;
+}
+
+.queueRow strong {
+  color: #123b55;
+  font-size: 9.25px;
+  font-weight: 810;
+}
+
+.queueRow span {
+  color: #5c7482;
+  font-size: 7.5px;
+  font-weight: 610;
+}
+
+.queueRow em {
+  color: #4f6876;
+  font-size: 7.25px;
+  font-weight: 760;
+}
+
+.queueEmpty {
+  color: #566f7d;
+  font-size: 8px;
+  font-weight: 610;
+}
+
+.statusHeader > strong {
+  color: #0a496f;
+  font-size: 21px;
+  font-weight: 850;
+}
+
+.statusMetrics strong {
+  color: #0e3b56;
+  font-size: 11.75px;
+  font-weight: 830;
+}
+
+.statusMetrics span {
+  color: #586f7d;
+  font-size: 7.4px;
+  font-weight: 660;
+}
+
+/* ==========================================================================
+   R21 U1 ENTERPRISE DASHBOARD MIGRATION
+   SoftZeno-informed typography/surface discipline translated to Nexus U1.
+   Dashboard data, chart logic, navigation and training authority are frozen.
+   ========================================================================== */
+
+.page {
+  font-family: var(--nx-font);
+  color: var(--nx-text);
+  font-size: 13px;
+  letter-spacing: -.005em;
+}
+
+/* Page hierarchy --------------------------------------------------------- */
+
+.pageHeader h1 {
+  color: var(--nx-text-strong) !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  line-height: 1.04 !important;
+  letter-spacing: -.03em !important;
+}
+
+.pageHeader p {
+  color: var(--nx-copy) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+}
+
+.eyebrow {
+  color: var(--nx-brand) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: .08em !important;
+}
+
+/* Surface system --------------------------------------------------------- */
+
+.kpiCard,
+.progressionCard,
+.nextCard,
+.queueCard,
+.statusCard {
+  border-color: var(--nx-line) !important;
+  border-radius: var(--nx-radius-card) !important;
+  background: var(--nx-surface) !important;
+  box-shadow: var(--nx-shadow-card) !important;
+}
+
+/* KPI strip -------------------------------------------------------------- */
+
+.kpiCard > span {
+  color: #4b6371 !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: .07em !important;
+}
+
+.kpiValueRow strong {
+  color: var(--nx-text-strong) !important;
+  font-size: 29px !important;
+  font-weight: 700 !important;
+  letter-spacing: -.025em !important;
+}
+
+.kpiValueRow small {
+  color: var(--nx-muted) !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  line-height: 1.28 !important;
+}
+
+/* Main analytics card ---------------------------------------------------- */
+
+.sectionHead h2,
+.sideHeading h2,
+.statusHeader h2 {
+  color: var(--nx-text-strong) !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  letter-spacing: -.018em !important;
+}
+
+.legend {
+  color: #4f6877 !important;
+  font-size: 9.5px !important;
+  font-weight: 600 !important;
+}
+
+.chartScale {
+  color: #536d7b !important;
+  font-size: 9.5px !important;
+  font-weight: 600 !important;
+}
+
+.scoreLabel {
+  color: #0d5538 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+.emptyScoreMessage span {
+  color: #3f5d6d !important;
+  font-size: 9.5px !important;
+  font-weight: 650 !important;
+}
+
+.scoreLaneRecommended .emptyScoreMessage span {
+  color: #994909 !important;
+}
+
+.emptyScoreMessage small {
+  color: var(--nx-muted) !important;
+  font-size: 8.5px !important;
+  font-weight: 500 !important;
+}
+
+.columnLabel b {
+  color: #3b596b !important;
+  font-size: 9px !important;
+  font-weight: 650 !important;
+}
+
+.columnLabel strong {
+  color: #153b52 !important;
+  font-size: 10.5px !important;
+  font-weight: 650 !important;
+  line-height: 1.24 !important;
+  letter-spacing: -.008em !important;
+}
+
+.columnLabel span {
+  padding: 3px 6px !important;
+  font-size: 8.5px !important;
+  font-weight: 600 !important;
+  line-height: 1.15 !important;
+}
+
+.completedStatus {
+  border: 1px solid var(--nx-success-line);
+  background: var(--nx-success-bg);
+  color: #047857 !important;
+}
+
+.recommendedStatus {
+  border: 1px solid var(--nx-warning-line);
+  background: var(--nx-warning-bg);
+  color: #974807 !important;
+}
+
+.pendingStatus {
+  border: 1px solid #dde6eb;
+  background: #f4f7f9;
+  color: #596f7c !important;
+}
+
+.chartFooter {
+  color: #526b79 !important;
+  font-size: 9px !important;
+  font-weight: 500 !important;
+}
+
+.chartFooter a {
+  color: var(--nx-brand) !important;
+  font-size: 9.5px !important;
+  font-weight: 650 !important;
+}
+
+/* Recommended next ------------------------------------------------------- */
+
+.nextMeta > b {
+  color: var(--nx-brand) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: .07em !important;
+}
+
+.nextMeta > span {
+  min-height: 22px;
+  display: inline-flex;
+  align-items: center;
+  border-color: var(--nx-warning-line) !important;
+  background: var(--nx-warning-bg) !important;
+  color: #914408 !important;
+  font-size: 9px !important;
+  font-weight: 650 !important;
+}
+
+.nextCard h2 {
+  color: var(--nx-text-strong) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  letter-spacing: -.02em !important;
+}
+
+.nextCard p {
+  color: var(--nx-copy) !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+}
+
+.tags span {
+  border-color: var(--nx-line) !important;
+  background: var(--nx-surface-soft) !important;
+  color: #4c6675 !important;
+  font-size: 9px !important;
+  font-weight: 600 !important;
+}
+
+.primaryAction {
+  min-height: 34px !important;
+  border-radius: var(--nx-radius-control) !important;
+  background: var(--nx-action) !important;
+  color: #ffffff !important;
+  font-size: 10px !important;
+  font-weight: 650 !important;
+  box-shadow: 0 4px 10px rgba(215, 99, 10, .12) !important;
+}
+
+.primaryAction:hover {
+  background: var(--nx-action-hover) !important;
+}
+
+/* Training queue --------------------------------------------------------- */
+
+.queueRow {
+  border-color: #e8eef1 !important;
+}
+
+.queueRow > b {
+  background: #f2f6f8 !important;
+  color: #3c5c6f !important;
+  font-size: 9px !important;
+  font-weight: 650 !important;
+}
+
+.queueRow strong {
+  color: #153b53 !important;
+  font-size: 10.5px !important;
+  font-weight: 650 !important;
+}
+
+.queueRow span {
+  color: var(--nx-muted) !important;
+  font-size: 9px !important;
+  font-weight: 500 !important;
+}
+
+.queueRow em {
+  color: #526c7a !important;
+  font-size: 8.5px !important;
+  font-weight: 600 !important;
+}
+
+.queueEmpty {
+  color: var(--nx-muted) !important;
+  font-size: 9.5px !important;
+  font-weight: 500 !important;
+}
+
+/* Program status --------------------------------------------------------- */
+
+.statusHeader > strong {
+  color: var(--nx-brand-deep) !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+}
+
+.progressTrack {
+  background: #e7edf1 !important;
+}
+
+.progressTrack i {
+  background: var(--nx-success) !important;
+}
+
+.statusMetrics div {
+  border-color: var(--nx-line) !important;
+  border-radius: var(--nx-radius-control) !important;
+  background: var(--nx-surface-soft) !important;
+}
+
+.statusMetrics strong {
+  color: #143b53 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+.statusMetrics span {
+  color: var(--nx-muted) !important;
+  font-size: 9px !important;
+  font-weight: 500 !important;
+}
+
+/* Chart visual restraint ------------------------------------------------- */
+
+.scoreLane::before {
+  border-color: #e4ebef !important;
+  background: linear-gradient(180deg, #fbfcfd, #f7fafb) !important;
+}
+
+.scoreLaneCompleted::before {
+  border-color: #dceae3 !important;
+  background: linear-gradient(180deg, #f5fbf8, #fbfdfc) !important;
+}
+
+.scoreLaneRecommended::before {
+  border: 1.5px dashed var(--nx-action) !important;
+  background: #fffaf5 !important;
+}
+
+.scoreLanePending::before {
+  border-color: #e4ebef !important;
+  background: #f8fafb !important;
+}
+
+.completedBar {
+  background: linear-gradient(180deg, #43ad78, #18885c) !important;
+  box-shadow: none !important;
+}
+
+.gridLines i {
+  border-color: #edf2f4 !important;
+}
+
+/* Keep compact no-scroll desktop composition ----------------------------- */
+
+@media (min-width: 1261px) and (min-height: 691px) {
+  .page {
+    overflow: hidden !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .pageHeader h1 {
+    font-size: 25px !important;
+  }
+
+  .kpiValueRow strong {
+    font-size: 26px !important;
+  }
+
+  .nextCard h2 {
+    font-size: 17px !important;
+  }
+}
+
+/* ==========================================================================
+   R22 FINAL UI/UX FREEZE
+   Final dashboard typography / spacing / proportion refinement.
+   Data, chart logic, recommendation logic and navigation remain frozen.
+   ========================================================================== */
+
+:global(.portal-content-v6):has(.page) {
+  max-width: 1510px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.page {
+  gap: 10px !important;
+  color: var(--nx-text);
+}
+
+/* Page heading ----------------------------------------------------------- */
+
+.pageHeader {
+  min-height: 52px !important;
+  margin-bottom: 2px !important;
+  padding: 0 2px !important;
+}
+
+.pageHeader h1 {
+  margin: 0 0 4px !important;
+  color: var(--nx-text-strong) !important;
+  font-size: 29px !important;
+  font-weight: 700 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.032em !important;
+}
+
+.pageHeader p {
+  margin: 0 !important;
+  color: #425e6e !important;
+  font-size: 11.5px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+}
+
+/* KPI strip -------------------------------------------------------------- */
+
+.kpiGrid {
+  gap: 9px !important;
+}
+
+.kpiCard {
+  min-height: 72px !important;
+  padding: 10px 12px !important;
+  border-radius: 10px !important;
+}
+
+.kpiCard > span {
+  color: #4b6372 !important;
+  font-size: 9.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: .065em !important;
+}
+
+.kpiValueRow {
+  margin-top: 5px !important;
+  align-items: flex-end !important;
+}
+
+.kpiValueRow strong {
+  color: #0b3048 !important;
+  font-size: 27px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+
+.kpiValueRow small {
+  max-width: 58% !important;
+  color: #586f7c !important;
+  font-size: 9px !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+}
+
+/* Main composition ------------------------------------------------------- */
+
+.mainGrid {
+  gap: 10px !important;
+  align-items: stretch !important;
+}
+
+.progressionCard {
+  min-height: 0 !important;
+  padding: 11px 12px 9px !important;
+}
+
+.sideStack {
+  gap: 10px !important;
+}
+
+.nextCard,
+.queueCard,
+.statusCard {
+  padding: 11px 12px !important;
+}
+
+/* Analytics heading / legend -------------------------------------------- */
+
+.sectionHead {
+  min-height: 38px !important;
+  align-items: flex-start !important;
+}
+
+.sectionHead h2 {
+  margin-top: 3px !important;
+  color: #0b3149 !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+}
+
+.legend {
+  gap: 10px !important;
+  color: #4c6574 !important;
+  font-size: 9px !important;
+}
+
+.legend span {
+  gap: 5px !important;
+}
+
+/* Chart ------------------------------------------------------------------ */
+
+.chart {
+  min-height: 0 !important;
+}
+
+.chartPlot {
+  min-height: 420px !important;
+  height: 420px !important;
+  margin-top: 2px !important;
+}
+
+.chartScale {
+  width: 44px !important;
+  color: #55707f !important;
+  font-size: 9px !important;
+  font-weight: 600 !important;
+}
+
+.gridLines {
+  left: 48px !important;
+}
+
+.scoreLanes {
+  left: 48px !important;
+  gap: 11px !important;
+}
+
+.scoreLane {
+  min-width: 0 !important;
+}
+
+.scoreLane::before {
+  inset: 7px 4px 0 !important;
+  border-radius: 8px !important;
+}
+
+.scoreLabel {
+  top: 0 !important;
+  color: #0c5238 !important;
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+}
+
+.emptyScoreMessage {
+  bottom: 13px !important;
+}
+
+.emptyScoreMessage span {
+  font-size: 9px !important;
+  font-weight: 650 !important;
+}
+
+.emptyScoreMessage small {
+  margin-top: 2px !important;
+  font-size: 8.5px !important;
+}
+
+.columnLabels {
+  left: 48px !important;
+  gap: 11px !important;
+  margin-top: 7px !important;
+}
+
+.columnLabel {
+  min-width: 0 !important;
+}
+
+.columnLabel b {
+  width: 25px !important;
+  height: 21px !important;
+  margin-bottom: 4px !important;
+  border-radius: 6px !important;
+  font-size: 9px !important;
+}
+
+.columnLabel strong {
+  color: #12384f !important;
+  font-size: 10px !important;
+  font-weight: 650 !important;
+  line-height: 1.18 !important;
+}
+
+.columnLabel span {
+  margin-top: 4px !important;
+  font-size: 8.5px !important;
+  font-weight: 600 !important;
+}
+
+.chartFooter {
+  min-height: 24px !important;
+  margin-top: 7px !important;
+  color: #506a79 !important;
+  font-size: 9px !important;
+}
+
+.chartFooter a {
+  font-size: 9.5px !important;
+  font-weight: 650 !important;
+}
+
+/* Recommended next ------------------------------------------------------- */
+
+.nextCard {
+  min-height: 180px !important;
+}
+
+.nextMeta {
+  margin-bottom: 5px !important;
+}
+
+.nextMeta > b {
+  font-size: 9.5px !important;
+}
+
+.nextMeta > span {
+  min-height: 22px !important;
+  padding: 0 8px !important;
+  font-size: 8.5px !important;
+}
+
+.nextCard h2 {
+  margin: 2px 0 5px !important;
+  color: #0b3149 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+.nextCard p {
+  margin: 0 !important;
+  color: #435f6e !important;
+  font-size: 10.5px !important;
+  font-weight: 500 !important;
+  line-height: 1.42 !important;
+}
+
+.tags {
+  gap: 6px !important;
+  margin-top: 8px !important;
+}
+
+.tags span {
+  min-height: 22px !important;
+  padding: 0 8px !important;
+  font-size: 8.5px !important;
+}
+
+.primaryAction {
+  min-height: 34px !important;
+  margin-top: auto !important;
+  padding: 0 12px !important;
+  font-size: 9.5px !important;
+}
+
+/* Queue ------------------------------------------------------------------ */
+
+.queueCard {
+  min-height: 176px !important;
+}
+
+.sideHeading {
+  margin-bottom: 5px !important;
+}
+
+.sideHeading h2 {
+  margin-top: 3px !important;
+  font-size: 16px !important;
+}
+
+.queueList {
+  gap: 0 !important;
+}
+
+.queueRow {
+  min-height: 35px !important;
+  padding: 5px 0 !important;
+}
+
+.queueRow > b {
+  width: 25px !important;
+  height: 23px !important;
+  border-radius: 6px !important;
+  font-size: 8.5px !important;
+}
+
+.queueRow strong {
+  color: #143a51 !important;
+  font-size: 10px !important;
+  font-weight: 650 !important;
+}
+
+.queueRow span {
+  margin-top: 1px !important;
+  font-size: 8.5px !important;
+}
+
+.queueRow em {
+  font-size: 8.5px !important;
+  font-style: normal !important;
+}
+
+/* Program status --------------------------------------------------------- */
+
+.statusCard {
+  min-height: 135px !important;
+}
+
+.statusHeader {
+  margin-bottom: 8px !important;
+}
+
+.statusHeader h2 {
+  margin-top: 3px !important;
+  font-size: 16px !important;
+}
+
+.statusHeader > strong {
+  color: #0a4568 !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+}
+
+.progressTrack {
+  height: 5px !important;
+  margin: 0 0 9px !important;
+}
+
+.statusMetrics {
+  gap: 6px !important;
+}
+
+.statusMetrics div {
+  min-height: 44px !important;
+  padding: 7px 8px !important;
+  border-radius: 8px !important;
+}
+
+.statusMetrics strong {
+  color: #123a52 !important;
+  font-size: 12px !important;
+}
+
+.statusMetrics span {
+  margin-top: 2px !important;
+  font-size: 8.5px !important;
+}
+
+/* Small visual finishing ------------------------------------------------- */
+
+.kpiCard,
+.progressionCard,
+.nextCard,
+.queueCard,
+.statusCard {
+  border-color: #dce5ea !important;
+  box-shadow: 0 1px 2px rgba(15, 41, 64, .045) !important;
+}
+
+.progressionCard,
+.nextCard,
+.queueCard,
+.statusCard {
+  border-radius: 11px !important;
+}
+
+@media (min-width: 1261px) and (min-height: 760px) {
+  .page {
+    max-height: calc(100dvh - 92px) !important;
+    overflow: hidden !important;
+  }
+}
+
+@media (max-width: 1260px) {
+  .chartPlot {
+    min-height: 360px !important;
+    height: 360px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .pageHeader h1 {
+    font-size: 25px !important;
+  }
+
+  .kpiCard {
+    min-height: 76px !important;
+  }
+
+  .chartPlot {
+    min-height: 340px !important;
+    height: 340px !important;
+  }
+}
+
+/* ==========================================================================
+   R23 SPACING + ALIGNMENT CLOSURE
+   Fixes grid-track under-allocation introduced by larger R22 header/KPI sizing.
+   Presentation geometry only. Dashboard logic and content remain frozen.
+   ========================================================================== */
+
+/* The original page track reserved only 40px while R22 header requires 52px+.
+   Reserve the real header height and a deliberate inter-section gap. */
+.page {
+  grid-template-rows: 58px minmax(0, 1fr) !important;
+  gap: 12px !important;
+}
+
+.pageHeader {
+  min-height: 58px !important;
+  margin: 0 !important;
+  padding: 2px 2px 0 !important;
+  align-items: flex-start !important;
+}
+
+.pageHeader > div {
+  min-width: 0;
+}
+
+/* The original dashboard KPI track reserved 66px while R22 cards require 72px.
+   Give the cards their own full row and a clean separation from analytics. */
+.dashboard {
+  grid-template-rows: 76px minmax(0, 1fr) !important;
+  gap: 12px !important;
+}
+
+.kpiGrid {
+  min-height: 76px !important;
+  align-items: stretch !important;
+}
+
+.kpiCard {
+  height: 100% !important;
+  min-height: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Main analytics and right column now start on exactly the same baseline. */
+.workspaceGrid {
+  gap: 12px !important;
+  align-items: stretch !important;
+}
+
+.progressionCard,
+.sideStack {
+  min-height: 0 !important;
+}
+
+.sideStack {
+  gap: 10px !important;
+}
+
+/* Keep deliberate space inside cards without reintroducing excess height. */
+.sectionHead {
+  margin-bottom: 4px !important;
+}
+
+.nextMeta,
+.sideHeading,
+.statusHeader {
+  flex-shrink: 0;
+}
+
+/* Desktop remains one-screen where the available viewport permits it. */
+@media (min-width: 1261px) and (min-height: 760px) {
+  .page {
+    height: min(680px, calc(100dvh - 102px)) !important;
+    max-height: calc(100dvh - 92px) !important;
+    overflow: hidden !important;
+  }
+}
+
+@media (max-width: 1260px) {
+  .page {
+    height: auto !important;
+    min-height: 0 !important;
+    grid-template-rows: auto auto !important;
+    overflow: visible !important;
+  }
+
+  .dashboard {
+    grid-template-rows: auto auto !important;
+  }
+
+  .kpiGrid {
+    min-height: 0 !important;
+  }
+
+  .kpiCard {
+    min-height: 76px !important;
+  }
+}
+
+/* ==========================================================================
+   R24 ACCURATE SCORE SCALE
+   Correct 0-1000 chart geometry and bind each score label to its actual bar.
+   Data values and score calculations remain unchanged.
+   ========================================================================== */
+
+/* Five labels represent five POINTS (1000/750/500/250/0), not five bands.
+   Four equal score intervals + the existing 68px module-label footer correctly
+   place 1000 at 0%, 750 at 25%, 500 at 50%, 250 at 75%, and 0 at 100%. */
+.chartScale {
+  display: grid !important;
+  grid-template-rows: repeat(4, minmax(0, 1fr)) 68px !important;
+  align-items: start !important;
+  padding-bottom: 0 !important;
+}
+
+.chartScale > span {
+  align-self: start !important;
+  line-height: 1 !important;
+}
+
+.chartScale > span:nth-child(1) {
+  transform: translateY(0) !important;
+}
+
+.chartScale > span:nth-child(n+2) {
+  transform: translateY(-50%) !important;
+}
+
+/* Grid lines are explicit scale points rather than row bottoms. */
+.gridLines {
+  display: block !important;
+  inset: 0 0 68px !important;
+}
+
+.gridLines i {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+  border-top: 1px solid #e8eef2 !important;
+}
+
+.gridLines i:nth-child(1) {
+  top: 0 !important;
+}
+
+.gridLines i:nth-child(2) {
+  top: 25% !important;
+}
+
+.gridLines i:nth-child(3) {
+  top: 50% !important;
+}
+
+.gridLines i:nth-child(4) {
+  top: 75% !important;
+}
+
+.gridLines i:nth-child(5) {
+  bottom: 0 !important;
+}
+
+/* The label's dynamic bottom value is supplied from the same scorePercent used
+   by the bar, so 900 is shown at the 900 position, not at the top of the lane. */
+.scoreLabel {
+  top: auto !important;
+  line-height: 1 !important;
+}
+
+/* Preserve exact score-region geometry. */
+.column {
+  grid-template-rows: minmax(0, 1fr) 64px !important;
+  gap: 4px !important;
+}
+
+.scoreLane {
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.completedBar {
+  flex: 0 0 auto !important;
+}
+
+/* Keep the score label above its own bar while remaining visually inside the
+   scale area for normal recorded values such as 900/1000. */
+.scoreLaneCompleted {
+  overflow: visible !important;
+}
+
+/* ==========================================================================
+   R25 SCORE HEADROOM + FOOTER AUTHORITY
+   1250 is chart-display headroom only. Maximum attainable training score = 1000.
+   ========================================================================== */
+
+/* Six exact ticks create five equal 250-point intervals:
+   1250 / 1000 / 750 / 500 / 250 / 0.
+   A perfect training score of 1000 therefore occupies 80% of chart height,
+   leaving 20% clean headroom for its value label. */
+.chartScale {
+  display: grid !important;
+  grid-template-rows: repeat(5, minmax(0, 1fr)) 68px !important;
+  align-items: start !important;
+  padding-bottom: 0 !important;
+}
+
+.chartScale > span {
+  align-self: start !important;
+  transform: translateY(-50%) !important;
+  line-height: 1 !important;
+}
+
+.chartScale > span:first-child {
+  transform: none !important;
+}
+
+.gridLines {
+  display: block !important;
+  inset: 0 0 68px !important;
+}
+
+.gridLines i {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+  border-top: 1px solid #e8eef2 !important;
+}
+
+.gridLines i:nth-child(1) { top: 0 !important; }
+.gridLines i:nth-child(2) { top: 20% !important; }
+.gridLines i:nth-child(3) { top: 40% !important; }
+.gridLines i:nth-child(4) { top: 60% !important; }
+.gridLines i:nth-child(5) { top: 80% !important; }
+.gridLines i:nth-child(6) { bottom: 0 !important; }
+
+.scoreLabel {
+  top: auto !important;
+}
+
+/* Proper chart footer ---------------------------------------------------- */
+
+.chartFooter {
+  min-height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  margin: 10px -12px -9px !important;
+  padding: 9px 12px !important;
+  border-top: 1px solid var(--nx-line) !important;
+  border-radius: 0 0 11px 11px !important;
+  background: #fbfcfd !important;
+  color: var(--nx-muted) !important;
+}
+
+.chartFooterCopy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chartFooterCopy strong {
+  color: #284c61;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+.chartFooterCopy span {
+  color: #607784;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.chartFooterAction {
+  flex: 0 0 auto !important;
+  min-height: 32px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  padding: 0 11px !important;
+  border: 1px solid #d5e1e7 !important;
+  border-radius: var(--nx-radius-control) !important;
+  background: #ffffff !important;
+  color: #0b4f73 !important;
+  font-size: 9.5px !important;
+  font-weight: 650 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  box-shadow: 0 1px 2px rgba(15, 41, 64, .035) !important;
+}
+
+.chartFooterAction:hover {
+  border-color: #b9cfda !important;
+  background: #f6fafc !important;
+  color: #083f5e !important;
+}
+
+.chartFooterAction span {
+  color: currentColor;
+  font-size: 11px;
+  line-height: 1;
+}
+
+@media (max-width: 760px) {
+  .chartFooter {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .chartFooterAction {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   R26 GOVERNED PROGRESS SYNC + SPACING
+   Overview now uses the same authenticated server record as Progress.
+   Also closes chart-label/footer spacing.
+   ========================================================================== */
+
+/* Loading/error states use the same governed surface language. */
+.dashboardState {
+  min-height: 210px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 7px;
+  padding: 24px;
+  border: 1px solid var(--nx-line);
+  border-radius: var(--nx-radius-surface);
+  background: var(--nx-surface);
+  color: var(--nx-text);
+  text-align: center;
+  box-shadow: var(--nx-shadow-card);
+}
+
+.dashboardState strong {
+  color: var(--nx-text-strong);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.dashboardState small {
+  color: var(--nx-muted);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.dashboardState button {
+  min-height: 32px;
+  margin-top: 4px;
+  padding: 0 12px;
+  border: 1px solid var(--nx-line-strong);
+  border-radius: var(--nx-radius-control);
+  background: #fff;
+  color: var(--nx-brand-deep);
+  font-size: 10px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.dashboardSpinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #dce8ee;
+  border-top-color: var(--nx-brand);
+  border-radius: 999px;
+  animation: overview-r26-spin .8s linear infinite;
+}
+
+@keyframes overview-r26-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Module labels were taller than the 64px lane reserved for them.
+   Reserve the real content height so labels/statuses never collide with footer. */
+.column {
+  grid-template-rows: minmax(0, 1fr) 82px !important;
+  gap: 6px !important;
+}
+
+.chartScale {
+  grid-template-rows: repeat(5, minmax(0, 1fr)) 88px !important;
+}
+
+.gridLines {
+  inset: 0 0 88px !important;
+}
+
+.columnLabel {
+  min-height: 82px !important;
+  padding: 0 3px 8px !important;
+  align-content: start !important;
+}
+
+.columnLabel strong {
+  min-height: 26px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+}
+
+.columnLabel span {
+  margin-top: 5px !important;
+}
+
+/* Distinct active training state without confusing it with recommendation. */
+.inProgressStatus {
+  border: 1px solid var(--nx-warning-line) !important;
+  background: var(--nx-warning-bg) !important;
+  color: #96500e !important;
+}
+
+/* Give the chart labels a deliberate visual buffer before the governed footer. */
+.chartFooter {
+  min-height: 52px !important;
+  margin: 14px -12px -9px !important;
+  padding: 10px 12px !important;
+}
+
+.chartFooterCopy {
+  gap: 3px !important;
+}
+
+.chartFooterCopy span {
+  max-width: 660px;
+}
+
+/* Right-column text remains truthful to governed status. */
+.queueRow em {
+  min-width: 58px;
+  text-align: right;
+}
+
+/* With the larger label lane, slightly reduce raw plot height rather than
+   allowing the page to scroll. */
+@media (min-width: 1261px) and (min-height: 760px) {
+  .chartPlot {
+    min-height: 394px !important;
+    height: 394px !important;
+  }
+}
+
+@media (max-width: 1260px) {
+  .chartPlot {
+    min-height: 350px !important;
+    height: 350px !important;
+  }
+}
+
+/* ==========================================================================
+   PORTAL U2 - PREMIUM KPI CARD SYSTEM
+   Overview KPI strip only. Layout/data/graph/runtime remain frozen.
+   Semantic mapping:
+   1 Completion = success green
+   2 Best score = premium blue
+   3 Knowledge = warm amber
+   4 Attempts = steel blue
+   ========================================================================== */
+
+.kpiCard {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-color: #dbe5ea;
+  box-shadow:
+    0 1px 2px rgba(15, 48, 67, .025),
+    0 7px 20px rgba(15, 48, 67, .035);
+}
+
+.kpiCard::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0 auto 0 0;
+  width: 4px;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.kpiCard::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -34px;
+  right: -30px;
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.62);
+  pointer-events: none;
+}
+
+.kpiCard:nth-child(1) {
+  border-color: #cce6d9;
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f7fcf9 58%, #edf8f2 100%);
+}
+.kpiCard:nth-child(1)::before { background: #16976f; }
+.kpiCard:nth-child(1) .kpiValueRow strong { color: #0d6a50; }
+
+.kpiCard:nth-child(2) {
+  border-color: #cfdfeb;
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f6faff 58%, #edf5fb 100%);
+}
+.kpiCard:nth-child(2)::before { background: #2577a6; }
+.kpiCard:nth-child(2) .kpiValueRow strong { color: #145979; }
+
+.kpiCard:nth-child(3) {
+  border-color: #ecdcbc;
+  background:
+    linear-gradient(135deg, #ffffff 0%, #fffaf3 58%, #fff4e4 100%);
+}
+.kpiCard:nth-child(3)::before { background: #d38a1f; }
+.kpiCard:nth-child(3) .kpiValueRow strong { color: #985b0f; }
+
+.kpiCard:nth-child(4) {
+  border-color: #d3e0e8;
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f7fafc 58%, #edf3f7 100%);
+}
+.kpiCard:nth-child(4)::before { background: #3a7898; }
+.kpiCard:nth-child(4) .kpiValueRow strong { color: #1d5672; }
+
+.kpiCard > span { color: #526b79; }
+.kpiValueRow small { color: #657b87; }

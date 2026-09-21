@@ -1,0 +1,1 @@
+import HazardQuiz from "@/components/hazard/HazardQuiz";import DemoTrainingGate from "@/components/demo/DemoTrainingGate";export default function Page(){return <DemoTrainingGate moduleSlug="hazard-perception"><HazardQuiz/></DemoTrainingGate>}

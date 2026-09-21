@@ -1,0 +1,325 @@
+.page{
+  min-height:100dvh;
+  padding:0 24px 40px;
+  background:
+    radial-gradient(circle at 90% 90%,rgba(214,106,32,.08),transparent 28%),
+    linear-gradient(145deg,#edf3f6,#f8fafb 62%);
+  color:#0e3146;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+.publicHeader{
+  width:min(1040px,100%);
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  margin:0 auto;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:11px;
+}
+.brand img{
+  width:48px;
+  height:36px;
+  object-fit:contain;
+}
+.brand strong{
+  display:block;
+  color:#123b52;
+  font-size:12px;
+}
+.brand span{
+  display:block;
+  margin-top:2px;
+  color:#738791;
+  font-size:7.5px;
+}
+.publicBadge{
+  min-height:28px;
+  display:inline-flex;
+  align-items:center;
+  padding:0 10px;
+  border:1px solid #d2e0e6;
+  border-radius:999px;
+  background:#fff;
+  color:#587280;
+  font-size:7.5px;
+  font-weight:800;
+}
+.card{
+  width:min(920px,100%);
+  margin:54px auto 0;
+  overflow:hidden;
+  border:1px solid #d5e1e6;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 22px 70px rgba(10,43,61,.12);
+}
+.cardHeader{
+  min-height:142px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:30px;
+  padding:28px 30px;
+  border-bottom:1px solid #e4ebef;
+}
+.eyebrow{
+  color:#bd5a1b;
+  font-size:7.5px;
+  font-weight:900;
+  letter-spacing:.105em;
+  text-transform:uppercase;
+}
+.cardHeader h1{
+  margin:7px 0 5px;
+  color:#0c3046;
+  font-size:27px;
+  font-weight:780;
+  letter-spacing:-.024em;
+}
+.cardHeader p{
+  max-width:590px;
+  margin:0;
+  color:#657d89;
+  font-size:10px;
+  line-height:1.5;
+}
+.validity{
+  min-height:29px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  flex:0 0 auto;
+  padding:0 11px;
+  border-radius:999px;
+  font-size:7px;
+  font-weight:900;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.validityDot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:currentColor;
+}
+.valid{background:#e5f6ed;color:#167750}
+.notCurrent{background:#fff1e5;color:#aa5419}
+.identity{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  margin:20px 30px 0;
+  padding:15px;
+  border:1px solid #dbe6ea;
+  border-radius:11px;
+  background:#f8fafb;
+}
+.avatar{
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border-radius:11px;
+  background:#0d405a;
+  color:#fff;
+  font-size:11px;
+  font-weight:900;
+}
+.identity span{
+  display:block;
+  color:#778b95;
+  font-size:6.8px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.identity strong{
+  display:block;
+  margin-top:3px;
+  color:#143d54;
+  font-size:13px;
+}
+.identity small{
+  display:block;
+  margin-top:3px;
+  color:#738690;
+  font-size:8px;
+}
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  margin:12px 30px 0;
+  border:1px solid #dbe5ea;
+  background:#e3eaee;
+}
+.metrics>div{
+  padding:14px;
+  background:#fff;
+}
+.metrics span,.certificateNumber span{
+  display:block;
+  color:#758994;
+  font-size:6.7px;
+  font-weight:900;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+.metrics strong{
+  display:block;
+  margin-top:6px;
+  color:#123e57;
+  font-size:14px;
+}
+.certificateNumber{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  margin:12px 30px 0;
+  padding:13px 14px;
+  border:1px solid #dbe5ea;
+  border-radius:10px;
+  background:#f8fafb;
+}
+.certificateNumber strong{
+  display:block;
+  margin-top:4px;
+  color:#173f56;
+  font-size:10px;
+}
+.certificateNumber small{
+  color:#7a8c95;
+  font-size:8px;
+}
+.notice{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  margin:12px 30px 0;
+  padding:11px 13px;
+  border:1px solid #e8d5bc;
+  border-radius:9px;
+  background:#fff9f1;
+  color:#725b3f;
+}
+.notice strong{font-size:9px}
+.notice span{font-size:8px;line-height:1.45}
+.footer{
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  margin-top:22px;
+  padding:16px 30px;
+  border-top:1px solid #e5ecef;
+  background:#fbfcfd;
+}
+.footer strong{
+  display:block;
+  color:#294f62;
+  font-size:9px;
+}
+.footer span{
+  display:block;
+  max-width:560px;
+  margin-top:3px;
+  color:#80919a;
+  font-size:7.5px;
+}
+.footer a{
+  min-height:32px;
+  display:inline-flex;
+  align-items:center;
+  padding:0 12px;
+  border:1px solid #d1dfe5;
+  border-radius:8px;
+  color:#2e5669;
+  font-size:8px;
+  font-weight:850;
+  text-decoration:none;
+}
+.footer a:hover{background:#f4f8fa}
+.loading{
+  min-height:75dvh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  color:#284f62;
+}
+.loading strong{font-size:13px}
+.loading span{margin-top:5px;color:#7b8e98;font-size:8px}
+.spinner{
+  width:28px;
+  height:28px;
+  margin-bottom:11px;
+  border:3px solid #dbe6ea;
+  border-top-color:#0c5776;
+  border-radius:50%;
+  animation:spin .7s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.error{
+  width:min(560px,100%);
+  margin:110px auto 0;
+  padding:32px;
+  border:1px solid #d7e2e7;
+  border-radius:15px;
+  background:#fff;
+  box-shadow:0 18px 54px rgba(10,43,61,.1);
+  text-align:center;
+}
+.errorIcon{
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  margin:0 auto 13px;
+  border-radius:12px;
+  background:#fff1e5;
+  color:#af561a;
+  font-size:18px;
+  font-weight:900;
+}
+.error>span{
+  color:#bd5a1b;
+  font-size:7px;
+  font-weight:900;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.error h1{
+  margin:6px 0 0;
+  color:#153d53;
+  font-size:21px;
+}
+.error p{
+  margin:7px 0 0;
+  color:#748791;
+  font-size:9px;
+}
+.error a{
+  display:inline-flex;
+  margin-top:15px;
+  color:#0a4b69;
+  font-size:8.5px;
+  font-weight:900;
+  text-decoration:none;
+}
+@media(max-width:760px){
+  .page{padding:0 14px 28px}
+  .publicHeader{min-height:62px}
+  .publicBadge{display:none}
+  .card{margin-top:28px}
+  .cardHeader{flex-direction:column;padding:22px 18px}
+  .identity,.metrics,.certificateNumber{margin-left:18px;margin-right:18px}
+  .metrics{grid-template-columns:1fr 1fr}
+  .footer{align-items:flex-start;flex-direction:column;padding:15px 18px}
+}

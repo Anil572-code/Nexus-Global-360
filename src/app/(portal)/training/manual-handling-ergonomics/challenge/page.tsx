@@ -1,0 +1,1 @@
+import VisualTrainingRuntime from "@/components/training/VisualTrainingRuntime";import DemoTrainingGate from "@/components/demo/DemoTrainingGate";export default function Page(){return <DemoTrainingGate moduleSlug="manual-handling-ergonomics"><VisualTrainingRuntime moduleSlug="manual-handling-ergonomics"/></DemoTrainingGate>}

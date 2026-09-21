@@ -1,0 +1,963 @@
+.nexus-admin-premium {
+  --admin-navy: #0b3f67;
+  --admin-blue: #0b5b8d;
+  --admin-blue-strong: #07527f;
+  --admin-blue-soft: #eaf4fa;
+  --admin-surface: #ffffff;
+  --admin-canvas: #f4f7f9;
+  --admin-border: #dce6ed;
+  --admin-border-soft: #e9eff3;
+  --admin-text: #17384f;
+  --admin-muted: #6f8393;
+  --admin-muted-2: #91a0ab;
+  --admin-green: #219267;
+  --admin-green-soft: #eaf8f1;
+  --admin-amber: #b8651b;
+  --admin-amber-soft: #fff7ed;
+  --admin-shadow: 0 12px 30px rgba(19, 50, 73, .055);
+  min-height: 100vh;
+  color: var(--admin-text);
+  background: var(--admin-canvas);
+}
+
+/* Administration shell: align visual authority with the employee portal. */
+.nexus-admin-premium aside {
+  width: 236px !important;
+  background: linear-gradient(180deg, #0b4f7c 0%, #0a5988 54%, #084b76 100%) !important;
+  border-right: 1px solid rgba(255,255,255,.08) !important;
+  box-shadow: 4px 0 24px rgba(9, 48, 76, .08) !important;
+  color: #fff !important;
+}
+.nexus-admin-premium aside img {
+  background: #fff;
+  border-radius: 9px;
+  padding: 5px;
+}
+.nexus-admin-premium aside strong,
+.nexus-admin-premium aside h1,
+.nexus-admin-premium aside h2 { color: #fff !important; }
+.nexus-admin-premium aside p,
+.nexus-admin-premium aside span { color: rgba(255,255,255,.72) !important; }
+.nexus-admin-premium aside nav a {
+  min-height: 44px !important;
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+  color: rgba(255,255,255,.84) !important;
+  font-weight: 700 !important;
+  transition: background .14s ease, border-color .14s ease, color .14s ease, transform .14s ease !important;
+}
+.nexus-admin-premium aside nav a svg { color: rgba(255,255,255,.76) !important; }
+.nexus-admin-premium aside nav a:hover {
+  background: rgba(255,255,255,.08) !important;
+  border-color: rgba(255,255,255,.08) !important;
+  color: #fff !important;
+  transform: translateX(1px);
+}
+.nexus-admin-premium aside nav a[aria-current="page"],
+.nexus-admin-premium aside nav a.active {
+  background: rgba(255,255,255,.14) !important;
+  border-color: rgba(255,255,255,.12) !important;
+  box-shadow: inset 3px 0 0 #7fd1ef !important;
+  color: #fff !important;
+}
+.nexus-admin-premium aside nav a[aria-current="page"] svg,
+.nexus-admin-premium aside nav a.active svg { color: #fff !important; }
+.nexus-admin-premium aside > div:last-child,
+.nexus-admin-premium aside footer {
+  border-top-color: rgba(255,255,255,.12) !important;
+  background: rgba(4, 46, 73, .24) !important;
+}
+
+.nexus-admin-premium header:not(.admin-card-header) {
+  min-height: 70px !important;
+  background: rgba(255,255,255,.98) !important;
+  border-bottom: 1px solid var(--admin-border) !important;
+  box-shadow: 0 1px 0 rgba(20,53,76,.015) !important;
+}
+.nexus-admin-premium main {
+  background: var(--admin-canvas) !important;
+  padding: 28px 30px 34px !important;
+}
+.nexus-admin-premium main > * { max-width: 1480px; margin-left: auto; margin-right: auto; }
+
+/* Shared admin controls and data surfaces. */
+.nexus-admin-premium main button,
+.nexus-admin-premium main a[role="button"] {
+  min-height: 36px;
+  border-radius: 9px;
+  font-weight: 750;
+}
+.nexus-admin-premium main input,
+.nexus-admin-premium main select,
+.nexus-admin-premium main textarea {
+  min-height: 39px;
+  border-radius: 9px !important;
+  border-color: var(--admin-border) !important;
+  color: var(--admin-text) !important;
+  background: #fff !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.nexus-admin-premium main input:focus,
+.nexus-admin-premium main select:focus,
+.nexus-admin-premium main textarea:focus {
+  border-color: #8dbbd4 !important;
+  box-shadow: 0 0 0 2px rgba(65,139,180,.10) !important;
+}
+.nexus-admin-premium main table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 12px;
+}
+.nexus-admin-premium main thead th {
+  padding: 10px 12px;
+  color: #708493;
+  background: #f8fafb;
+  border-bottom: 1px solid var(--admin-border-soft);
+  font-size: 9.5px;
+  font-weight: 850;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+  text-align: left;
+}
+.nexus-admin-premium main tbody td {
+  padding: 12px;
+  border-bottom: 1px solid var(--admin-border-soft);
+  color: #435f73;
+  vertical-align: middle;
+}
+.nexus-admin-premium main tbody tr:last-child td { border-bottom: 0; }
+.nexus-admin-premium main tbody tr:hover td { background: #fbfdfe; }
+.nexus-admin-premium main h1 { color: #153a53; letter-spacing: -.032em; }
+.nexus-admin-premium main h2 { color: #17384f; letter-spacing: -.018em; }
+
+/* Admin overview */
+.admin-overview-page { display: flex; flex-direction: column; gap: 14px; }
+.admin-page-heading { min-height: 76px; display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
+.admin-eyebrow { margin: 0 0 6px; color: #bd641b; font-size: 9.5px; line-height: 1; font-weight: 900; letter-spacing: .105em; text-transform: uppercase; }
+.admin-page-heading h1 { margin: 0; font-size: 28px; line-height: 1.08; font-weight: 810; }
+.admin-page-subtitle { margin: 7px 0 0; color: var(--admin-muted); font-size: 12.5px; line-height: 1.5; }
+.admin-scope-card { display: flex; align-items: center; gap: 10px; min-width: 168px; padding: 9px 12px; border: 1px solid var(--admin-border); border-radius: 12px; background: #fff; box-shadow: 0 6px 16px rgba(26,58,80,.035); }
+.admin-scope-card > div { display: flex; flex-direction: column; gap: 2px; }
+.admin-scope-card span:not(.admin-status-dot) { color: var(--admin-muted-2); font-size: 8.5px; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+.admin-scope-card strong { color: var(--admin-text); font-size: 11.5px; }
+.admin-status-dot { width: 8px; height: 8px; flex: 0 0 auto; border-radius: 50%; background: #24ad79; box-shadow: 0 0 0 4px #e9f7f1; }
+
+.admin-kpi-grid { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); border: 1px solid var(--admin-border); border-radius: 14px; overflow: hidden; background: #fff; box-shadow: var(--admin-shadow); }
+.admin-kpi-card { min-height: 90px; display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-right: 1px solid var(--admin-border-soft); background: #fff; }
+.admin-kpi-card:last-child { border-right: 0; }
+.admin-kpi-card--attention { background: linear-gradient(180deg,#fffaf4,#fff7ed); }
+.admin-kpi-icon { width: 34px; height: 34px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 10px; color: var(--admin-blue); background: #edf6fb; border: 1px solid #dbeaf2; }
+.admin-kpi-card--attention .admin-kpi-icon { color: var(--admin-amber); background: #fff3e4; border-color: #f6dfc6; }
+.admin-kpi-copy { min-width: 0; display: flex; flex-direction: column; }
+.admin-kpi-copy > span { color: #687d8c; font-size: 10px; font-weight: 760; }
+.admin-kpi-copy strong { margin-top: 2px; color: #17384f; font-size: 22px; line-height: 1.05; letter-spacing: -.03em; }
+.admin-kpi-copy small { margin-top: 4px; color: #93a1ab; font-size: 9.5px; }
+.admin-kpi-card--attention .admin-kpi-copy strong { color: #a45619; }
+
+.admin-overview-grid { display: grid; grid-template-columns: minmax(390px,.86fr) minmax(620px,1.44fr); gap: 14px; min-height: 392px; }
+.admin-card { border: 1px solid var(--admin-border); border-radius: 14px; background: #fff; box-shadow: var(--admin-shadow); overflow: hidden; }
+.admin-card-header { min-height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 14px; border-bottom: 1px solid var(--admin-border-soft); background: #fff; }
+.admin-card-title { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.admin-card-title > div { min-width: 0; }
+.admin-card-title p { margin: 0 0 2px; color: #8b9aa5; font-size: 8.5px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+.admin-card-title h2 { margin: 0; font-size: 14px; font-weight: 800; }
+.admin-card-icon { width: 32px; height: 32px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 9px; background: #eef6fa; border: 1px solid #dfeaf0; color: var(--admin-blue); }
+.admin-badge { display: inline-flex; align-items: center; min-height: 26px; padding: 0 9px; border-radius: 999px; color: #647887; background: #f4f7f9; border: 1px solid #e8eef2; font-size: 8.5px; font-weight: 850; white-space: nowrap; }
+.admin-badge--green { color: #217957; background: #edf8f2; border-color: #dcefe5; }
+
+.admin-module-list { padding: 0 14px 8px; }
+.admin-module-row { display: grid; grid-template-columns: minmax(190px,1.2fr) minmax(110px,.9fr) 54px; gap: 12px; align-items: center; min-height: 53px; border-bottom: 1px solid var(--admin-border-soft); }
+.admin-module-row:last-child { border-bottom: 0; }
+.admin-module-copy { min-width: 0; }
+.admin-module-copy strong, .admin-module-copy span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.admin-module-copy strong { color: #294b62; font-size: 10.5px; font-weight: 760; }
+.admin-module-copy span { margin-top: 3px; color: #93a1ab; font-size: 8.8px; }
+.admin-progress { height: 5px; border-radius: 999px; overflow: hidden; background: #eaf0f4; }
+.admin-progress span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg,#0d6a9f,#1590ba); }
+.admin-module-number { text-align: right; }
+.admin-module-number strong, .admin-module-number span { display: block; }
+.admin-module-number strong { color: #25475f; font-size: 10.5px; }
+.admin-module-number span { margin-top: 2px; color: #94a2ac; font-size: 8.5px; }
+
+.admin-table-wrap { overflow: auto; }
+.admin-data-table thead th { position: sticky; top: 0; z-index: 1; }
+.admin-data-table td strong, .admin-data-table td span { display: block; }
+.admin-data-table td strong { color: #24465f; font-size: 10.5px; font-weight: 760; }
+.admin-data-table td span { margin-top: 2px; color: #95a2ac; font-size: 8.8px; }
+.admin-empty, .admin-empty-cell { color: #8496a4; text-align: center; font-size: 11px; }
+.admin-empty { padding: 34px 12px; }
+.admin-empty-cell { padding: 36px 16px !important; }
+
+.admin-audit-card { min-height: 142px; }
+.admin-audit-list { max-height: 190px; overflow: auto; }
+.admin-audit-row { min-height: 44px; display: grid; grid-template-columns: 12px minmax(0,1fr) 112px; gap: 9px; align-items: center; padding: 8px 14px; border-bottom: 1px solid var(--admin-border-soft); }
+.admin-audit-row:last-child { border-bottom: 0; }
+.admin-audit-dot { width: 6px; height: 6px; border-radius: 50%; background: #0c79aa; box-shadow: 0 0 0 3px #e9f4f9; }
+.admin-audit-copy { min-width: 0; }
+.admin-audit-copy strong, .admin-audit-copy span { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.admin-audit-copy strong { color: #36566d; font-size: 10px; }
+.admin-audit-copy span { margin-top: 2px; color: #97a4ad; font-size: 8.6px; }
+.admin-audit-row time { color: #8b9ba6; font-size: 8.8px; text-align: right; }
+
+.admin-state-card { padding: 18px 20px; border: 1px solid var(--admin-border); border-radius: 14px; background: #fff; }
+.admin-state-card strong { color: #27485e; }
+.admin-state-card p { margin: 5px 0 0; color: var(--admin-muted); }
+.admin-state-card--danger { border-color: #efd9cf; background: #fff8f5; }
+
+/* Make the existing Users / Departments / Training / Assignments workspaces visually converge without changing behavior. */
+.nexus-admin-premium main > div:not(.admin-overview-page) { color: var(--admin-text); }
+.nexus-admin-premium main > div:not(.admin-overview-page) > section,
+.nexus-admin-premium main > div:not(.admin-overview-page) > div {
+  border-color: var(--admin-border) !important;
+}
+.nexus-admin-premium main > div:not(.admin-overview-page) table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.nexus-admin-premium main [role="dialog"] {
+  border: 1px solid var(--admin-border) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 28px 72px rgba(10,38,57,.22) !important;
+}
+.nexus-admin-premium [data-admin-layer="true"] { backdrop-filter: blur(2px); }
+
+@media (max-width: 1280px) {
+  .admin-kpi-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .admin-kpi-card:nth-child(3) { border-right: 0; }
+  .admin-kpi-card:nth-child(n+4) { border-top: 1px solid var(--admin-border-soft); }
+  .admin-overview-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  .nexus-admin-premium main { padding: 20px !important; }
+  .admin-page-heading { flex-direction: column; }
+  .admin-kpi-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .admin-kpi-card:nth-child(odd) { border-right: 1px solid var(--admin-border-soft); }
+  .admin-kpi-card:nth-child(even) { border-right: 0; }
+}
+@media (max-width: 640px) {
+  .admin-page-heading h1 { font-size: 25px; }
+  .admin-kpi-grid { grid-template-columns: 1fr; }
+  .admin-kpi-card { border-right: 0 !important; border-top: 1px solid var(--admin-border-soft); }
+  .admin-kpi-card:first-child { border-top: 0; }
+  .admin-module-row { grid-template-columns: 1fr 52px; }
+  .admin-progress { grid-column: 1 / -1; grid-row: 2; margin-bottom: 8px; }
+}
+
+/* ========================================================================== */
+/* v8.5.17 - Full administration UI/UX convergence                            */
+/* Purpose: bring every administration workspace to the employee-portal       */
+/* design authority without changing any workflow, action, permission or API. */
+/* ========================================================================== */
+
+.nexus-admin-premium {
+  --admin-navy: #0a466f;
+  --admin-blue: #0a5b8d;
+  --admin-blue-strong: #084f7b;
+  --admin-blue-soft: #edf6fb;
+  --admin-canvas: #f5f8fa;
+  --admin-surface: #ffffff;
+  --admin-border: #d9e4eb;
+  --admin-border-soft: #e8eef2;
+  --admin-text: #15384f;
+  --admin-muted: #6c8191;
+  --admin-muted-2: #8b9ca8;
+  --admin-green: #1f9468;
+  --admin-green-soft: #eaf7f1;
+  --admin-amber: #b76522;
+  --admin-amber-soft: #fff6ec;
+  --admin-danger: #b84c45;
+  --admin-danger-soft: #fff1f0;
+  --admin-shadow: 0 9px 26px rgba(19, 53, 77, .045);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Shell density and hierarchy */
+.nexus-admin-premium aside {
+  width: 228px !important;
+  background: #0b5889 !important;
+  box-shadow: 3px 0 18px rgba(5, 47, 75, .07) !important;
+}
+.nexus-admin-premium aside > div:first-child {
+  min-height: 72px !important;
+  border-bottom-color: rgba(255,255,255,.12) !important;
+}
+.nexus-admin-premium aside > div:first-child p,
+.nexus-admin-premium aside > div:first-child span {
+  color: rgba(255,255,255,.72) !important;
+}
+.nexus-admin-premium aside nav {
+  padding-top: 8px !important;
+}
+.nexus-admin-premium aside nav a {
+  min-height: 42px !important;
+  margin: 2px 8px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  border-radius: 9px !important;
+  font-size: 13px !important;
+  font-weight: 720 !important;
+}
+.nexus-admin-premium aside nav a:hover {
+  transform: none !important;
+  background: rgba(255,255,255,.075) !important;
+}
+.nexus-admin-premium aside nav a[aria-current="page"],
+.nexus-admin-premium aside nav a.active {
+  background: rgba(255,255,255,.14) !important;
+  border-color: rgba(255,255,255,.13) !important;
+  box-shadow: inset 3px 0 0 #82d2ef !important;
+}
+
+/* Fix the old authority-protected card that became white-on-white after the
+   shell migration. Preserve its purpose, but make it part of the dark rail. */
+.nexus-admin-premium aside [class*="bg-violet"],
+.nexus-admin-premium aside [class*="bg-purple"] {
+  background: rgba(255,255,255,.075) !important;
+  border-color: rgba(255,255,255,.14) !important;
+  box-shadow: none !important;
+}
+.nexus-admin-premium aside [class*="bg-violet"] *,
+.nexus-admin-premium aside [class*="bg-purple"] *,
+.nexus-admin-premium aside [class*="text-violet"],
+.nexus-admin-premium aside [class*="text-purple"] {
+  color: rgba(255,255,255,.86) !important;
+}
+.nexus-admin-premium aside [class*="rounded-full"][class*="bg-violet"],
+.nexus-admin-premium aside [class*="rounded-full"][class*="bg-purple"] {
+  background: #e9f5fb !important;
+  color: #0b5889 !important;
+}
+
+.nexus-admin-premium header:not(.admin-card-header) {
+  min-height: 68px !important;
+  height: 68px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background: #fff !important;
+}
+.nexus-admin-premium header:not(.admin-card-header) [class*="text-violet"],
+.nexus-admin-premium header:not(.admin-card-header) [class*="text-purple"] {
+  color: var(--admin-blue) !important;
+}
+
+.nexus-admin-premium main {
+  padding: 24px 28px 30px !important;
+  background: var(--admin-canvas) !important;
+}
+.nexus-admin-premium main > * {
+  max-width: 1370px !important;
+}
+
+/* Page authority header: same compact hierarchy as the employee portal. */
+.nexus-admin-premium main h1 {
+  color: #12374f !important;
+  font-size: 28px !important;
+  line-height: 1.08 !important;
+  font-weight: 820 !important;
+  letter-spacing: -.035em !important;
+}
+.nexus-admin-premium main h2 {
+  color: #173a52 !important;
+  font-weight: 790 !important;
+}
+.nexus-admin-premium main p {
+  line-height: 1.45;
+}
+.nexus-admin-premium main [class*="uppercase"][class*="tracking"] {
+  letter-spacing: .08em !important;
+  font-size: 10px !important;
+  font-weight: 850 !important;
+}
+.nexus-admin-premium main [class*="text-violet"],
+.nexus-admin-premium main [class*="text-purple"] {
+  color: var(--admin-blue) !important;
+}
+.nexus-admin-premium main [class*="border-violet"],
+.nexus-admin-premium main [class*="border-purple"] {
+  border-color: #cfe1ec !important;
+}
+
+/* Remove the old purple product language from solid actions. */
+.nexus-admin-premium main button[class*="bg-violet-6"],
+.nexus-admin-premium main button[class*="bg-violet-7"],
+.nexus-admin-premium main button[class*="bg-violet-8"],
+.nexus-admin-premium main button[class*="bg-purple-6"],
+.nexus-admin-premium main button[class*="bg-purple-7"],
+.nexus-admin-premium main button[class*="bg-purple-8"],
+.nexus-admin-premium main a[class*="bg-violet-6"],
+.nexus-admin-premium main a[class*="bg-violet-7"],
+.nexus-admin-premium main a[class*="bg-purple-6"],
+.nexus-admin-premium main a[class*="bg-purple-7"] {
+  background: var(--admin-blue) !important;
+  border-color: var(--admin-blue) !important;
+  color: #fff !important;
+  box-shadow: 0 5px 12px rgba(10,91,141,.12) !important;
+}
+.nexus-admin-premium main button[class*="bg-violet-6"]:hover,
+.nexus-admin-premium main button[class*="bg-violet-7"]:hover,
+.nexus-admin-premium main button[class*="bg-violet-8"]:hover,
+.nexus-admin-premium main button[class*="bg-purple-6"]:hover,
+.nexus-admin-premium main button[class*="bg-purple-7"]:hover,
+.nexus-admin-premium main button[class*="bg-purple-8"]:hover {
+  background: var(--admin-blue-strong) !important;
+}
+
+/* Pale legacy purple buttons (Manage / secondary actions) become quiet blue. */
+.nexus-admin-premium main button[class*="bg-violet-50"],
+.nexus-admin-premium main button[class*="bg-violet-100"],
+.nexus-admin-premium main button[class*="bg-purple-50"],
+.nexus-admin-premium main button[class*="bg-purple-100"] {
+  background: #f2f8fb !important;
+  border-color: #d7e7ef !important;
+  color: #175a80 !important;
+  box-shadow: none !important;
+}
+.nexus-admin-premium main button[class*="bg-violet-50"]:hover,
+.nexus-admin-premium main button[class*="bg-violet-100"]:hover,
+.nexus-admin-premium main button[class*="bg-purple-50"]:hover,
+.nexus-admin-premium main button[class*="bg-purple-100"]:hover {
+  background: #e9f4f9 !important;
+  border-color: #c6dde9 !important;
+}
+
+/* Shared control authority */
+.nexus-admin-premium main button,
+.nexus-admin-premium main a[role="button"] {
+  min-height: 38px !important;
+  padding-left: 13px;
+  padding-right: 13px;
+  border-radius: 9px !important;
+  font-size: 12px !important;
+  font-weight: 760 !important;
+  transition: background-color .14s ease, border-color .14s ease, color .14s ease, box-shadow .14s ease !important;
+}
+.nexus-admin-premium main button:focus-visible,
+.nexus-admin-premium main a[role="button"]:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(24,114,162,.13) !important;
+}
+.nexus-admin-premium main button:disabled {
+  opacity: .52 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+
+.nexus-admin-premium main input,
+.nexus-admin-premium main select,
+.nexus-admin-premium main textarea {
+  min-height: 40px !important;
+  border: 1px solid var(--admin-border) !important;
+  border-radius: 9px !important;
+  color: #24485f !important;
+  background: #fff !important;
+  font-size: 12.5px !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.nexus-admin-premium main input::placeholder,
+.nexus-admin-premium main textarea::placeholder {
+  color: #98a8b3 !important;
+  opacity: 1 !important;
+}
+.nexus-admin-premium main input:focus,
+.nexus-admin-premium main select:focus,
+.nexus-admin-premium main textarea:focus {
+  border-color: #7fb0cb !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.nexus-admin-premium main select {
+  cursor: pointer;
+}
+.nexus-admin-premium main label {
+  color: #36566b;
+  font-size: 11px;
+  font-weight: 760;
+}
+
+/* Cards/toolbars: reduce market-of-boxes feel and use a single surface system. */
+.nexus-admin-premium main [class*="rounded-xl"][class*="border"],
+.nexus-admin-premium main [class*="rounded-2xl"][class*="border"] {
+  border-color: var(--admin-border) !important;
+  box-shadow: var(--admin-shadow) !important;
+}
+.nexus-admin-premium main [class*="bg-slate-50"],
+.nexus-admin-premium main [class*="bg-gray-50"] {
+  background-color: #f8fafb !important;
+}
+
+/* Data workspace density/readability */
+.nexus-admin-premium main table {
+  font-size: 12.5px !important;
+}
+.nexus-admin-premium main thead th {
+  height: 40px;
+  padding: 9px 12px !important;
+  color: #698090 !important;
+  background: #f7fafb !important;
+  border-bottom-color: #e3eaef !important;
+  font-size: 9.5px !important;
+  font-weight: 860 !important;
+  letter-spacing: .065em !important;
+}
+.nexus-admin-premium main tbody td {
+  min-height: 52px;
+  padding: 12px !important;
+  color: #456276 !important;
+}
+.nexus-admin-premium main tbody tr {
+  background: #fff;
+}
+.nexus-admin-premium main tbody tr:hover td {
+  background: #f9fcfd !important;
+}
+.nexus-admin-premium main tbody td strong,
+.nexus-admin-premium main tbody td [class*="font-semibold"] {
+  color: #1d425a !important;
+  font-weight: 760 !important;
+}
+
+/* Status chips should be compact, legible and semantic. */
+.nexus-admin-premium main [class*="bg-green-50"],
+.nexus-admin-premium main [class*="bg-emerald-50"] {
+  background: var(--admin-green-soft) !important;
+}
+.nexus-admin-premium main [class*="text-green-7"],
+.nexus-admin-premium main [class*="text-emerald-7"] {
+  color: #287756 !important;
+}
+.nexus-admin-premium main [class*="bg-amber-50"],
+.nexus-admin-premium main [class*="bg-yellow-50"] {
+  background: var(--admin-amber-soft) !important;
+}
+.nexus-admin-premium main [class*="bg-red-50"] {
+  background: var(--admin-danger-soft) !important;
+}
+
+/* Dialog authority: premium, readable and consistent with My Account portals. */
+.nexus-admin-premium [data-admin-layer="true"],
+.nexus-admin-premium [class*="fixed"][class*="inset-0"] {
+  backdrop-filter: blur(3px);
+}
+.nexus-admin-premium main [role="dialog"],
+.nexus-admin-premium [role="dialog"] {
+  border: 1px solid #d8e4eb !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  box-shadow: 0 30px 86px rgba(7,35,53,.24) !important;
+  overflow: hidden;
+}
+.nexus-admin-premium [role="dialog"] input,
+.nexus-admin-premium [role="dialog"] select,
+.nexus-admin-premium [role="dialog"] textarea {
+  border-radius: 9px !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.nexus-admin-premium [role="dialog"] input:focus,
+.nexus-admin-premium [role="dialog"] select:focus,
+.nexus-admin-premium [role="dialog"] textarea:focus {
+  border-color: #7fb0cb !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Overview refinements */
+.admin-overview-page { gap: 12px !important; }
+.admin-page-heading {
+  min-height: 70px !important;
+  align-items: center !important;
+}
+.admin-eyebrow {
+  color: #b96624 !important;
+  font-size: 9.5px !important;
+}
+.admin-page-heading h1 {
+  font-size: 28px !important;
+}
+.admin-page-subtitle {
+  margin-top: 5px !important;
+  font-size: 12.5px !important;
+}
+.admin-scope-card {
+  min-width: 176px !important;
+  padding: 9px 12px !important;
+  border-radius: 11px !important;
+  box-shadow: none !important;
+}
+.admin-kpi-grid {
+  border-radius: 12px !important;
+  box-shadow: var(--admin-shadow) !important;
+}
+.admin-kpi-card {
+  min-height: 84px !important;
+  padding: 12px 14px !important;
+}
+.admin-kpi-icon {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 9px !important;
+}
+.admin-kpi-copy > span { font-size: 10px !important; }
+.admin-kpi-copy strong { font-size: 21px !important; }
+.admin-kpi-copy small { font-size: 9px !important; }
+.admin-overview-grid {
+  min-height: 372px !important;
+  gap: 12px !important;
+}
+.admin-card {
+  border-radius: 12px !important;
+  box-shadow: var(--admin-shadow) !important;
+}
+.admin-card-header {
+  min-height: 58px !important;
+  padding: 10px 13px !important;
+}
+.admin-module-row { min-height: 51px !important; }
+.admin-audit-card { min-height: 136px !important; }
+.admin-audit-row { min-height: 43px !important; }
+
+/* Consistent scrollbar treatment inside admin workspaces. */
+.nexus-admin-premium * {
+  scrollbar-width: thin;
+  scrollbar-color: #b9c8d1 transparent;
+}
+.nexus-admin-premium *::-webkit-scrollbar { width: 7px; height: 7px; }
+.nexus-admin-premium *::-webkit-scrollbar-track { background: transparent; }
+.nexus-admin-premium *::-webkit-scrollbar-thumb {
+  background: #bdcad2;
+  border-radius: 999px;
+}
+
+/* Tablet/mobile: keep controls usable rather than squeezing desktop density. */
+@media (max-width: 1100px) {
+  .nexus-admin-premium main { padding: 22px !important; }
+  .nexus-admin-premium main > * { max-width: none !important; }
+}
+@media (max-width: 900px) {
+  .nexus-admin-premium main { padding: 18px !important; }
+  .nexus-admin-premium main h1 { font-size: 25px !important; }
+  .nexus-admin-premium main button,
+  .nexus-admin-premium main a[role="button"] { min-height: 40px !important; }
+  .nexus-admin-premium main input,
+  .nexus-admin-premium main select { min-height: 42px !important; }
+}
+
+
+/* ========================================================================== */
+/* v8.5.18 - ADMIN SIDEBAR AUTHORITY CLOSURE                                  */
+/* Fixes highlighted navigation hierarchy, authority card and footer actions. */
+/* ========================================================================== */
+
+/* Section labels: quiet authority labels, never button-like or boxed. */
+.nexus-admin-premium aside nav [class*="uppercase"],
+.nexus-admin-premium aside nav [class*="tracking"],
+.nexus-admin-premium aside [class*="uppercase"][class*="tracking"] {
+  color: rgba(235,247,255,.62) !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font-size: 9px !important;
+  line-height: 1.2 !important;
+  font-weight: 850 !important;
+  letter-spacing: .115em !important;
+  text-transform: uppercase !important;
+}
+
+/* Navigation: tighter rows, restrained active state, consistent icon alignment. */
+.nexus-admin-premium aside nav a {
+  min-height: 40px !important;
+  margin: 2px 10px !important;
+  padding: 0 12px !important;
+  gap: 11px !important;
+  border: 1px solid transparent !important;
+  border-radius: 9px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(245,251,255,.86) !important;
+}
+.nexus-admin-premium aside nav a svg {
+  width: 18px !important;
+  height: 18px !important;
+  color: rgba(222,242,253,.78) !important;
+}
+.nexus-admin-premium aside nav a:hover {
+  background: rgba(255,255,255,.075) !important;
+  border-color: rgba(255,255,255,.055) !important;
+  color: #fff !important;
+}
+.nexus-admin-premium aside nav a[aria-current="page"],
+.nexus-admin-premium aside nav a.active {
+  background: rgba(255,255,255,.105) !important;
+  border-color: rgba(255,255,255,.075) !important;
+  box-shadow: inset 2px 0 0 #93d8ef !important;
+  color: #fff !important;
+}
+.nexus-admin-premium aside nav a[aria-current="page"] svg,
+.nexus-admin-premium aside nav a.active svg {
+  color: #effbff !important;
+}
+
+/* Authority card: force a dark-rail surface so it can never become white-on-white. */
+.nexus-admin-premium aside > div:nth-last-child(2),
+.nexus-admin-premium aside > section:nth-last-child(2),
+.nexus-admin-premium aside > div:not(:first-child):not(:last-child)[class*="bg-white"],
+.nexus-admin-premium aside > section[class*="bg-white"] {
+  background: rgba(4,43,68,.34) !important;
+  border-color: rgba(255,255,255,.12) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+.nexus-admin-premium aside > div:nth-last-child(2) *,
+.nexus-admin-premium aside > section:nth-last-child(2) *,
+.nexus-admin-premium aside > div:not(:first-child):not(:last-child)[class*="bg-white"] *,
+.nexus-admin-premium aside > section[class*="bg-white"] * {
+  color: rgba(244,250,254,.78) !important;
+}
+.nexus-admin-premium aside > div:nth-last-child(2) strong,
+.nexus-admin-premium aside > section:nth-last-child(2) strong,
+.nexus-admin-premium aside > div:not(:first-child):not(:last-child)[class*="bg-white"] strong,
+.nexus-admin-premium aside > section[class*="bg-white"] strong {
+  color: #fff !important;
+}
+.nexus-admin-premium aside > div:nth-last-child(2) svg,
+.nexus-admin-premium aside > section:nth-last-child(2) svg {
+  color: #9edbf0 !important;
+}
+
+/* Footer identity and sign-out action: one compact, balanced authority row. */
+.nexus-admin-premium aside footer,
+.nexus-admin-premium aside > div:last-child {
+  min-height: 62px !important;
+  padding: 8px 10px !important;
+  border-top: 1px solid rgba(255,255,255,.12) !important;
+  background: rgba(4,42,67,.24) !important;
+}
+.nexus-admin-premium aside footer button,
+.nexus-admin-premium aside > div:last-child button,
+.nexus-admin-premium aside footer a[role="button"],
+.nexus-admin-premium aside > div:last-child a[role="button"] {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  padding: 0 !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  border-radius: 9px !important;
+  background: rgba(255,255,255,.055) !important;
+  color: rgba(240,249,254,.82) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.nexus-admin-premium aside footer button:hover,
+.nexus-admin-premium aside > div:last-child button:hover,
+.nexus-admin-premium aside footer a[role="button"]:hover,
+.nexus-admin-premium aside > div:last-child a[role="button"]:hover {
+  background: rgba(255,255,255,.11) !important;
+  border-color: rgba(255,255,255,.16) !important;
+  color: #fff !important;
+}
+.nexus-admin-premium aside footer button:focus-visible,
+.nexus-admin-premium aside > div:last-child button:focus-visible,
+.nexus-admin-premium aside footer a[role="button"]:focus-visible,
+.nexus-admin-premium aside > div:last-child a[role="button"]:focus-visible {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(157,218,240,.28) !important;
+}
+.nexus-admin-premium aside footer button svg,
+.nexus-admin-premium aside > div:last-child button svg,
+.nexus-admin-premium aside footer a[role="button"] svg,
+.nexus-admin-premium aside > div:last-child a[role="button"] svg {
+  width: 17px !important;
+  height: 17px !important;
+  color: inherit !important;
+}
+
+/* ========================================================================== */
+/* v8.5.19 - ADMIN FINAL VISUAL AUTHORITY CLOSURE                              */
+/* Final convergence pass: eliminate legacy purple authority, compact admin    */
+/* portals, normalize controls and preserve all existing behavior.             */
+/* ========================================================================== */
+
+/* Page authority labels follow the employee portal's restrained orange cue. */
+.nexus-admin-premium main div:has(> h1) > [class*="uppercase"][class*="tracking"],
+.nexus-admin-premium main section:has(> h1) > [class*="uppercase"][class*="tracking"] {
+  color: #b96522 !important;
+}
+
+/* Dialog section authority uses Nexus blue, never legacy purple. */
+.nexus-admin-premium [role="dialog"] [class*="uppercase"][class*="tracking"],
+.nexus-admin-premium [role="dialog"] [class*="text-violet"],
+.nexus-admin-premium [role="dialog"] [class*="text-purple"],
+.nexus-admin-premium [role="dialog"] [class*="text-indigo"] {
+  color: var(--admin-blue) !important;
+}
+
+/* Any legacy primary CTA using white text is normalized to corporate blue.
+   Explicit destructive red/rose actions remain untouched. */
+.nexus-admin-premium main button[class*="text-white"]:not([class*="bg-red"]):not([class*="bg-rose"]):not([class*="bg-orange"]),
+.nexus-admin-premium main a[class*="text-white"]:not([class*="bg-red"]):not([class*="bg-rose"]):not([class*="bg-orange"]),
+.nexus-admin-premium [role="dialog"] button[class*="text-white"]:not([class*="bg-red"]):not([class*="bg-rose"]):not([class*="bg-orange"]) {
+  background: var(--admin-blue) !important;
+  border-color: var(--admin-blue) !important;
+  color: #fff !important;
+  box-shadow: 0 5px 12px rgba(10,91,141,.12) !important;
+}
+.nexus-admin-premium main button[class*="text-white"]:not([class*="bg-red"]):not([class*="bg-rose"]):not([class*="bg-orange"]):hover,
+.nexus-admin-premium [role="dialog"] button[class*="text-white"]:not([class*="bg-red"]):not([class*="bg-rose"]):not([class*="bg-orange"]):hover {
+  background: var(--admin-blue-strong) !important;
+  border-color: var(--admin-blue-strong) !important;
+}
+
+/* Legacy violet/purple button variants, including custom shade utilities. */
+.nexus-admin-premium button[class*="bg-violet"],
+.nexus-admin-premium button[class*="bg-purple"],
+.nexus-admin-premium a[class*="bg-violet"],
+.nexus-admin-premium a[class*="bg-purple"] {
+  background-color: var(--admin-blue) !important;
+  border-color: var(--admin-blue) !important;
+  color: #fff !important;
+}
+.nexus-admin-premium button[class*="bg-violet"]:hover,
+.nexus-admin-premium button[class*="bg-purple"]:hover,
+.nexus-admin-premium a[class*="bg-violet"]:hover,
+.nexus-admin-premium a[class*="bg-purple"]:hover {
+  background-color: var(--admin-blue-strong) !important;
+}
+
+/* Quiet secondary/manage actions: remove residual purple text/borders. */
+.nexus-admin-premium main button[class*="text-violet"],
+.nexus-admin-premium main button[class*="text-purple"],
+.nexus-admin-premium main a[class*="text-violet"],
+.nexus-admin-premium main a[class*="text-purple"] {
+  color: #175a80 !important;
+  border-color: #d5e5ee !important;
+}
+
+/* Search/filter bars: one compact authority surface, consistent rhythm. */
+.nexus-admin-premium main form:has(input[type="search"]),
+.nexus-admin-premium main form:has(input[placeholder*="Search"]),
+.nexus-admin-premium main div:has(> input[placeholder*="Search"]):has(> select) {
+  border-color: var(--admin-border) !important;
+  border-radius: 11px !important;
+  box-shadow: none !important;
+}
+.nexus-admin-premium main input[type="search"],
+.nexus-admin-premium main input[placeholder*="Search"] {
+  min-height: 38px !important;
+}
+
+/* Inputs/selects: restrained selected state, no thick focus ring. */
+.nexus-admin-premium main input:focus,
+.nexus-admin-premium main select:focus,
+.nexus-admin-premium main textarea:focus,
+.nexus-admin-premium [role="dialog"] input:focus,
+.nexus-admin-premium [role="dialog"] select:focus,
+.nexus-admin-premium [role="dialog"] textarea:focus {
+  border-color: #79aac5 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.nexus-admin-premium input[type="checkbox"],
+.nexus-admin-premium input[type="radio"] {
+  accent-color: var(--admin-blue) !important;
+}
+
+/* Modal density: show more of Create employee / Assign training in one view
+   without shrinking typography or changing the workflow. */
+.nexus-admin-premium [role="dialog"] {
+  max-height: min(84vh, 760px) !important;
+}
+.nexus-admin-premium [role="dialog"] [class*="p-6"] {
+  padding: 18px !important;
+}
+.nexus-admin-premium [role="dialog"] [class*="px-6"] {
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+.nexus-admin-premium [role="dialog"] [class*="py-5"],
+.nexus-admin-premium [role="dialog"] [class*="py-6"] {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+.nexus-admin-premium [role="dialog"] [class*="gap-6"] {
+  gap: 16px !important;
+}
+.nexus-admin-premium [role="dialog"] [class*="gap-5"] {
+  gap: 14px !important;
+}
+.nexus-admin-premium [role="dialog"] [class*="space-y-6"] > * + * {
+  margin-top: 16px !important;
+}
+.nexus-admin-premium [role="dialog"] [class*="space-y-5"] > * + * {
+  margin-top: 14px !important;
+}
+.nexus-admin-premium [role="dialog"] input,
+.nexus-admin-premium [role="dialog"] select,
+.nexus-admin-premium [role="dialog"] textarea {
+  min-height: 38px !important;
+  font-size: 12px !important;
+}
+.nexus-admin-premium [role="dialog"] label {
+  font-size: 10.5px !important;
+  line-height: 1.25 !important;
+}
+.nexus-admin-premium [role="dialog"] h2 {
+  color: #153a53 !important;
+  letter-spacing: -.018em !important;
+}
+.nexus-admin-premium [role="dialog"] p {
+  color: #718493;
+}
+
+/* Module-selection cards inside assignment/create-account portals. */
+.nexus-admin-premium [role="dialog"] [class*="rounded-xl"][class*="border"],
+.nexus-admin-premium [role="dialog"] [class*="rounded-lg"][class*="border"] {
+  border-color: #dfe8ee !important;
+  box-shadow: none !important;
+}
+.nexus-admin-premium [role="dialog"] [class*="rounded-xl"][class*="border"]:hover,
+.nexus-admin-premium [role="dialog"] [class*="rounded-lg"][class*="border"]:hover {
+  border-color: #c8dce7 !important;
+}
+
+/* Footer actions stay visible and visually stable in long portals. */
+.nexus-admin-premium [role="dialog"] [class*="sticky"][class*="bottom-0"],
+.nexus-admin-premium [role="dialog"] footer {
+  background: rgba(255,255,255,.98) !important;
+  border-top-color: var(--admin-border-soft) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Data tables: final consistency for Users/Departments/Modules/Assignments. */
+.nexus-admin-premium main table {
+  border-color: var(--admin-border) !important;
+}
+.nexus-admin-premium main thead th {
+  color: #687f8f !important;
+  background: #f7fafb !important;
+}
+.nexus-admin-premium main tbody td {
+  color: #425f73 !important;
+}
+.nexus-admin-premium main tbody tr:hover td {
+  background: #fafcfd !important;
+}
+
+/* Desktop density: keep the administration workspaces comfortably inside the
+   first viewport while retaining natural page scroll for smaller screens. */
+@media (min-width: 1180px) {
+  .nexus-admin-premium main {
+    padding-top: 22px !important;
+    padding-bottom: 26px !important;
+  }
+  .nexus-admin-premium main > * {
+    max-width: 1390px !important;
+  }
+}

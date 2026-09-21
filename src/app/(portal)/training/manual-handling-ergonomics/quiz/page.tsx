@@ -1,0 +1,1 @@
+import VisualTrainingQuiz from "@/components/training/VisualTrainingQuiz";import DemoTrainingGate from "@/components/demo/DemoTrainingGate";export default function Page(){return <DemoTrainingGate moduleSlug="manual-handling-ergonomics"><VisualTrainingQuiz moduleSlug="manual-handling-ergonomics"/></DemoTrainingGate>}

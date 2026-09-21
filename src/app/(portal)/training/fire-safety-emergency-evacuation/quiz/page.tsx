@@ -1,0 +1,1 @@
+import VisualTrainingQuiz from "@/components/training/VisualTrainingQuiz";import DemoTrainingGate from "@/components/demo/DemoTrainingGate";export default function Page(){return <DemoTrainingGate moduleSlug="fire-safety-emergency-evacuation"><VisualTrainingQuiz moduleSlug="fire-safety-emergency-evacuation"/></DemoTrainingGate>}

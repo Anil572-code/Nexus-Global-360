@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.local.example
+npm-debug.log*
+.DS_Store
+.turbo/
+coverage/
+dist/
+*.log
+.env
+.env.*
+!.env.example
+.upgrade-backups/
+*-backups/
