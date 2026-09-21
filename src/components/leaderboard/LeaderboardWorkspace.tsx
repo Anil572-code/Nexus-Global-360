@@ -328,7 +328,7 @@ export default function LeaderboardWorkspace() {
         <div className={styles.boardHeader}>
           <div className={styles.boardTitle}>
             <span className={styles.eyebrow}>
-              Demo training record
+              Training record
             </span>
             <h2>
               {record.module?.title ??

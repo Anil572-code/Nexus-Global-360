@@ -645,7 +645,7 @@ export default function HazardPanorama() {
 
   async function startInspection(restart = false) {
     setRuntimeStatus("connecting");
-    setRuntimeMessage(restart ? "Creating a fresh governed attempt…" : "Opening your local demo training record…");
+    setRuntimeMessage(restart ? "Creating a fresh governed attempt…" : "Opening your training record…");
     try {
       const remote = await startTrainingAttempt("hazard-perception", restart);
       const remoteStartedAt = Date.parse(remote.startedAt);
@@ -692,7 +692,7 @@ export default function HazardPanorama() {
       window.setTimeout(() => viewerRef.current?.focus(), 50);
     } catch (error) {
       setRuntimeStatus("error");
-      setRuntimeMessage(error instanceof Error ? error.message : "Local demo training record is unavailable.");
+      setRuntimeMessage(error instanceof Error ? error.message : "Training record is unavailable.");
     }
   }
 
@@ -1051,7 +1051,7 @@ export default function HazardPanorama() {
               </>
             )}
           </div>
-          <div className="scene-hud-right-v71 scene-hud-right-v844"><div className={`training-sync-chip ${runtimeStatus}`}><span aria-hidden="true" />{runtimeStatus === "connecting" ? "Saving" : runtimeStatus === "error" ? "Record issue" : runtimeStatus === "synced" ? "Local record" : "Demo ready"}</div><div className="scene-view-chip scene-view-chip-v41 scene-view-chip-v43 scene-view-chip-v844" aria-label="Live camera orientation"><strong ref={liveHeadingRef}>{headingLabel(yaw)}</strong><span ref={liveFovRef}>{Math.round(fov)}° FOV</span><em ref={livePitchRef}>{pitchLabel(pitch)}</em></div></div>
+          <div className="scene-hud-right-v71 scene-hud-right-v844"><div className={`training-sync-chip ${runtimeStatus}`}><span aria-hidden="true" />{runtimeStatus === "connecting" ? "Saving" : runtimeStatus === "error" ? "Record issue" : runtimeStatus === "synced" ? "Local record" : "Ready"}</div><div className="scene-view-chip scene-view-chip-v41 scene-view-chip-v43 scene-view-chip-v844" aria-label="Live camera orientation"><strong ref={liveHeadingRef}>{headingLabel(yaw)}</strong><span ref={liveFovRef}>{Math.round(fov)}° FOV</span><em ref={livePitchRef}>{pitchLabel(pitch)}</em></div></div>
         </div>
 
         {started && (

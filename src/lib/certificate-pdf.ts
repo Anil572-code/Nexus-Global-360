@@ -102,7 +102,7 @@ export function createCertificatePdfBytesForValidation(
     centered(data.moduleTitle, 274, 21, "F2", 0.47),
 
     "0.36 0.45 0.50 rg",
-    centered("This competency record is issued from the browser-local Nexus Safety 360 demo training record", 248, 7.6, "F1"),
+    centered("This competency record is issued from the Nexus Safety 360 training record", 248, 7.6, "F1"),
     centered("maintained by Nexus Global Logistics.", 236, 7.6, "F1"),
 
     "q", "0.86 0.90 0.92 RG", "1 w", "151 199 540 0 re S", "Q",

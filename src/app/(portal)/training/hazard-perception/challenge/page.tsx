@@ -1,1 +1,1 @@
-import HazardPanorama from "@/components/hazard/HazardPanorama";import DemoTrainingGate from "@/components/demo/DemoTrainingGate";export default function Page(){return <DemoTrainingGate moduleSlug="hazard-perception"><HazardPanorama/></DemoTrainingGate>}
+import HazardPanorama from "@/components/hazard/HazardPanorama";import TrainingAccessGate from "@/components/runtime/TrainingAccessGate";export default function Page(){return <TrainingAccessGate moduleSlug="hazard-perception"><HazardPanorama/></TrainingAccessGate>}

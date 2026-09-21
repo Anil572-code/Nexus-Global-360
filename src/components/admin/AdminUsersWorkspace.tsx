@@ -570,7 +570,7 @@ export default function AdminUsersWorkspace() {
                     <div className={styles.tabScroll}>
                       <div className={styles.sectionTitle}>
                         <div><span>Profile & authority</span><h3>Employee identity</h3></div>
-                        <p>Identity changes are applied through the local demo authority layer.</p>
+                        <p>Identity changes are applied through the local system authority layer.</p>
                       </div>
                       <div className={styles.grid}>
                         <label>Employee ID<input data-autofocus name="employeeId" defaultValue={selected.employeeId} readOnly={selected.id === data.currentUserId} /></label>
@@ -665,7 +665,7 @@ export default function AdminUsersWorkspace() {
                         <div className={styles.securityPlaceholder}>
                           <div className={styles.securityMark}>✓</div>
                           <h3>Security authority protected</h3>
-                          <p>Select an administrative action. Each operation is checked and recorded by the local demo authority layer.</p>
+                          <p>Select an administrative action. Each operation is checked and recorded by the local system authority layer.</p>
                         </div>
                       ) : (
                         <form onSubmit={runSecurity} className={styles.securityForm} noValidate>
@@ -682,7 +682,7 @@ export default function AdminUsersWorkspace() {
                             </div>
                           ) : null}
                           <label className={styles.reasonField}>Administrative reason<input data-autofocus={securityAction !== "password" ? true : undefined} name="reason" maxLength={240} placeholder="Why is this action required?" /></label>
-                          {securityAction === "delete" ? <div className={styles.deleteWarning}><b>Permanent operation</b><span>If protected training history exists, the demo authority layer will reject deletion and the account should be disabled instead.</span></div> : null}
+                          {securityAction === "delete" ? <div className={styles.deleteWarning}><b>Permanent operation</b><span>If protected training history exists, the system authority layer will reject deletion and the account should be disabled instead.</span></div> : null}
                           <div className={styles.securityFormActions}>
                             <button type="button" className={styles.secondary} onClick={() => { setSecurityAction(null); setError(""); }}>Cancel</button>
                             <button className={securityAction === "delete" ? styles.danger : styles.primary} disabled={busy}>{busy ? "Working…" : "Review action"}</button>
@@ -735,8 +735,8 @@ export default function AdminUsersWorkspace() {
         open={pendingConfirmation?.kind === "security"}
         title={pendingConfirmation?.kind === "security" ? securityTitle(pendingConfirmation.action) : "Confirm security action"}
         description={pendingConfirmation?.kind === "security" && pendingConfirmation.action === "delete"
-          ? "Permanent deletion is attempted only when no protected training or achievement history exists. Otherwise the demo authority layer rejects it."
-          : "This privileged account-security operation will take effect immediately after local demo authorization."}
+          ? "Permanent deletion is attempted only when no protected training or achievement history exists. Otherwise the system authority layer rejects it."
+          : "This privileged account-security operation will take effect immediately after system authorization."}
         confirmLabel={pendingConfirmation?.kind === "security" && pendingConfirmation.action === "delete" ? "Permanently delete" : "Confirm security action"}
         tone={pendingConfirmation?.kind === "security" && (pendingConfirmation.action === "delete" || (pendingConfirmation.action === "status" && selected?.status === "ACTIVE")) ? "danger" : "default"}
         busy={busy}

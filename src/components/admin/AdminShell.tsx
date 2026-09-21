@@ -92,7 +92,7 @@ export default function AdminShell({
         <nav className={styles.nav} aria-label="Administration control plane">{renderLinks(controlPlane)}</nav>
         <div className={styles.sectionLabel}>Training operations</div>
         <nav className={styles.nav} aria-label="Administration training operations">{renderLinks(trainingOps)}</nav>
-        <div className={styles.releaseNote}><span><Icon name="shield"/></span><div><strong>Authority protected</strong><p>Demo role permissions, scope and local audit govern administrative actions in this browser.</p></div></div>
+        <div className={styles.releaseNote}><span><Icon name="shield"/></span><div><strong>Authority protected</strong><p>Role permissions, authority scope and audit controls govern administrative actions.</p></div></div>
         <div className={styles.userPanel}>
           <div className={styles.avatar} aria-hidden="true">{initials}</div>
           <div className={styles.userCopy}><strong>{user.name}</strong><span>{roleLabel(user.role)}</span></div>

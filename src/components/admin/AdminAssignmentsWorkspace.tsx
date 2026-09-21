@@ -137,7 +137,7 @@ export default function AdminAssignmentsWorkspace() {
       </section>
 
       <section className={styles.panel}>
-        <div className={styles.panelHeader}><span>{data?.pagination.total ?? 0} assignments</span><span>Browser-local demo training access</span></div>
+        <div className={styles.panelHeader}><span>{data?.pagination.total ?? 0} assignments</span><span>Training access authority</span></div>
         <div style={{overflowX:"auto"}}>
           <table className={styles.table}>
             <thead><tr><th>Employee</th><th>Department</th><th>Module</th><th>Status</th><th>Due</th><th>Assigned</th></tr></thead>
@@ -195,7 +195,7 @@ export default function AdminAssignmentsWorkspace() {
       <AdminConfirmDialog
         open={finalConfirm && !!review}
         title="Create these training assignments?"
-        description="This is the final commit. Existing assignments are preserved and duplicates are skipped by the demo data layer."
+        description="This is the final commit. Existing assignments are preserved and duplicates are skipped by the training data layer."
         confirmLabel="Confirm assignments"
         busy={busy}
         details={review ? [

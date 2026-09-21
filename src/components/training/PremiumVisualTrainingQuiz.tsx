@@ -121,7 +121,7 @@ export default function PremiumVisualTrainingQuiz({
           <div>
             <div className={styles.eyebrow}>{module.title} · Knowledge check</div>
             <h1>Reinforce the decisions you just practised</h1>
-            <p>Answer each question from the scenario principles. Your final result is evaluated by the local demo training record.</p>
+            <p>Answer each question from the scenario principles. Your final result is evaluated by the training record.</p>
           </div>
           <div className={styles.quizCounter}>
             <strong>{index + 1}</strong>

@@ -10,7 +10,7 @@ export type ModuleResult = {
   completedAt: string;
 };
 
-export type DemoProgress = {
+export type TrainingProgress = {
   completedModules: string[];
   bestScore: number;
   hazardsFound: number;
@@ -19,7 +19,7 @@ export type DemoProgress = {
   moduleResults: Record<string, ModuleResult>;
 };
 
-export const emptyProgress: DemoProgress = {
+export const emptyProgress: TrainingProgress = {
   completedModules: [],
   bestScore: 0,
   hazardsFound: 0,
@@ -28,12 +28,12 @@ export const emptyProgress: DemoProgress = {
   moduleResults: {},
 };
 
-export function readProgress(): DemoProgress {
+export function readProgress(): TrainingProgress {
   if (typeof window === "undefined") return emptyProgress;
   try {
     const raw = window.localStorage.getItem(PROGRESS_KEY);
     if (!raw) return emptyProgress;
-    const parsed = JSON.parse(raw) as Partial<DemoProgress>;
+    const parsed = JSON.parse(raw) as Partial<TrainingProgress>;
     return {
       ...emptyProgress,
       ...parsed,
@@ -45,7 +45,7 @@ export function readProgress(): DemoProgress {
   }
 }
 
-export function writeProgress(progress: DemoProgress) {
+export function writeProgress(progress: TrainingProgress) {
   if (typeof window !== "undefined") {
     window.localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
   }
@@ -62,7 +62,7 @@ export function recordModuleResult(
     ? Math.min(previous.bestDurationSeconds, result.durationSeconds)
     : result.durationSeconds;
 
-  const next: DemoProgress = {
+  const next: TrainingProgress = {
     ...current,
     completedModules: Array.from(new Set([...current.completedModules, moduleId])),
     bestScore: Math.max(current.bestScore, result.score),

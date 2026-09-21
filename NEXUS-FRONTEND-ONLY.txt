@@ -1,0 +1,5 @@
+NEXUS GLOBAL SAFETY 360
+FRONTEND-ONLY DEPLOYMENT EDITION
+
+This workspace contains the independent frontend-only Nexus Global Safety 360 application.
+The original full-stack Nexus-Global project remains separate and unchanged.

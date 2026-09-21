@@ -23,8 +23,8 @@ export default function ProgressPage() {
 
       <section className="progress-foundation-note progress-foundation-note-v6">
         <div className="local-authority-icon">⌁</div>
-        <div><strong>Demo progress</strong><span>Your scores, completion and achievements are saved in this browser so the training can be resumed during the demonstration.</span></div>
-        <small>Local demo storage</small>
+        <div><strong>Training progress</strong><span>Your scores, completion and achievements are saved so training can be resumed across sessions in this browser.</span></div>
+        <small>Training record</small>
       </section>
     </div>
   );

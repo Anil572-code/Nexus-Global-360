@@ -238,7 +238,7 @@ export default function AuthoritativeProgressWorkspace() {
     return (
       <div className={styles.loading}>
         <div className={styles.spinner} />
-        <strong>Loading demo training record…</strong>
+        <strong>Loading training record…</strong>
         <span>
           Retrieving completion and performance from Nexus training authority.
         </span>
@@ -390,7 +390,7 @@ export default function AuthoritativeProgressWorkspace() {
           <div className={styles.historyMeta}>
             <span className={styles.authority}>
               <i />
-              Demo training record
+              Training record
             </span>
             <span className={styles.recordSummary}>
               {summary.completedModules} completed · {summary.inProgressModules} active · {readyModules} ready
@@ -522,7 +522,7 @@ export default function AuthoritativeProgressWorkspace() {
 
       <footer className={styles.footer}>
         <span>
-          Completion and scores are read from the browser-local Nexus demo training
+          Completion and scores are read from the Nexus Safety 360 training
           record.
         </span>
         <span>
@@ -596,7 +596,7 @@ export default function AuthoritativeProgressWorkspace() {
             <section className={styles.detailSection}>
               <div className={styles.detailSectionHeading}>
                 <span>Recorded performance</span>
-                <p>Read-only values from the browser-local Nexus demo training record.</p>
+                <p>Read-only values from the Nexus Safety 360 training record.</p>
               </div>
 
               <div className={styles.detailMetrics}>

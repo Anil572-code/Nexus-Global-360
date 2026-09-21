@@ -77,7 +77,7 @@ export default function AdminConfirmDialog({
           <div className={`${styles.notice} ${tone === "danger" ? styles.dangerNotice : ""}`}>
             {tone === "danger"
               ? "This action has material account or data consequences. Confirm only if the details above are correct."
-              : "The demo authority layer will re-check your role and record the operation in the local audit trail."}
+              : "The system authority layer will re-check your role and record the operation in the local audit trail."}
           </div>
         </div>
 

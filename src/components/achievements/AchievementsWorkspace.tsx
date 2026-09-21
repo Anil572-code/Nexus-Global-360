@@ -234,7 +234,7 @@ export default function AchievementsWorkspace() {
           Synchronizing achievements…
         </strong>
         <small>
-          Evaluating your local demo training record.
+          Evaluating your training record.
         </small>
       </section>
     );

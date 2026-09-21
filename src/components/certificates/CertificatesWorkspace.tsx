@@ -124,7 +124,7 @@ function CertificateArtwork({
 
         <p className={styles.formalRecognition}>
           This competency record is issued from the browser-local Nexus Safety
-          360 demo training record.
+          360 training record.
         </p>
 
         <div className={styles.formalIssueLine}>

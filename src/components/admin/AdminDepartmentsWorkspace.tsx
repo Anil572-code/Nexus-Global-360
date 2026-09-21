@@ -219,7 +219,7 @@ export default function AdminDepartmentsWorkspace() {
         open={confirmation?.kind === "status"}
         title={selected?.isActive ? "Deactivate department?" : "Activate department?"}
         description={selected?.isActive
-          ? "Deactivation is governed by the demo authority while active employees remain. Confirm only after organizational placement is correct."
+          ? "Deactivation is governed by the system authority while active employees remain. Confirm only after organizational placement is correct."
           : "Activation makes this department available again for user placement and training operations."}
         confirmLabel={selected?.isActive ? "Deactivate department" : "Activate department"}
         tone={selected?.isActive ? "danger" : "default"}

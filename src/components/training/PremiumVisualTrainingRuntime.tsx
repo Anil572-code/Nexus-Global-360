@@ -382,7 +382,7 @@ export default function PremiumVisualTrainingRuntime({
           <span className={styles.badge}>{module.accentLabel}</span>
           <div className={styles.identityCopy}>
             <strong>{module.scenarioLabel}</strong>
-            <span>{module.modeLabel} · Local demo attempt</span>
+            <span>{module.modeLabel} · Training attempt</span>
           </div>
         </div>
 

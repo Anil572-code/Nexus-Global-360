@@ -14,3 +14,8 @@ dist/
 !.env.example
 .upgrade-backups/
 *-backups/
+.env.local
+.env.development
+.env.production
+.env.test
+Thumbs.db

@@ -1,41 +1,31 @@
-# Nexus Global Safety 360 — Frontend Demo Edition
+# Nexus Global Safety 360
 
-Frontend-only assignment/demo build of Nexus Global Safety 360. The original full-stack project is intentionally separate and unchanged.
+Nexus Global Safety 360 is a frontend-only safety training and administration platform built with Next.js. It includes employee training, progress tracking, certificates, achievements, account management, and an administration control plane.
 
-## Demo accounts
+## Access
 
-- Employee: `NGL-001` / `Nexus@2026!`
-- Administrator: `NGL-ADMIN` / `NexusAdmin@2026!`
+- Employee ID: `NGL-001`
+- Administrator ID: `NGL-ADMIN`
 
-## Architecture
+Credentials are configured in the client-side application for this deployment.
 
-- Next.js 16 / React 19
-- Static export for Vercel
-- Browser-local demo authentication
-- Browser `localStorage` for users, assignments, training records, profile settings, certificates and audit activity
-- No database, Prisma, NestJS backend or backend environment variables
-
-## Local
+## Local development
 
 ```powershell
 npm install
 npm start
 ```
 
-Open `http://localhost:7077`.
+The application runs on `http://localhost:7077`.
 
-## Build
+## Production build
 
 ```powershell
 npm run build
 ```
 
-The static deployment is generated in `out`.
+The project uses Next.js static export and can be deployed to Vercel without database or backend environment variables.
 
-## Vercel
+## Data model
 
-Import the repository/project in Vercel. Framework preset: Next.js. Build command: `npm run build`. No environment variables are required.
-
-## Demo-data behavior
-
-Data persists only in the current browser. A different browser/device receives its own seeded demo workspace. This edition is intended for assignment demonstration, not production authentication or shared multi-user operation.
+Application state is persisted in browser storage. Training progress, account preferences, certificates, assignments and administrative records remain available in the same browser between sessions.

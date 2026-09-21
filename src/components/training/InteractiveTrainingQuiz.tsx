@@ -81,7 +81,7 @@ function LegacyInteractiveTrainingQuiz({ moduleSlug }: { moduleSlug: Interactive
       </header>
 
       <section className={styles.main}>
-        <div className={styles.sceneHeader}><div className={styles.eyebrow}>Knowledge check</div><h1>Reinforce the key safety principles</h1><p>Answer every question. Your result is evaluated and stored in this browser demo.</p></div>
+        <div className={styles.sceneHeader}><div className={styles.eyebrow}>Knowledge check</div><h1>Reinforce the key safety principles</h1><p>Answer every question. Your result is evaluated and stored in your training record.</p></div>
         <div className={styles.body}>
           {error ? <div className={styles.error}>{error}</div> : null}
           <div className={styles.quizGrid}>

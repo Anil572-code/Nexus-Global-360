@@ -151,7 +151,7 @@ export default function OverviewJourney() {
     return (
       <section className={styles.dashboardState} aria-live="polite">
         <span className={styles.dashboardSpinner} aria-hidden="true" />
-        <strong>Loading demo training record…</strong>
+        <strong>Loading training record…</strong>
         <small>Synchronizing your latest completions and results.</small>
       </section>
     );

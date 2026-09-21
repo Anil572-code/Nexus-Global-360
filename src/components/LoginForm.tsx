@@ -73,7 +73,7 @@ export default function LoginForm() {
 
       <div className="secure-note">
         <span className="secure-dot" aria-hidden="true" />
-        Demo credentials are validated locally in this browser. Employee: NGL-001 / Nexus@2026! · Admin: NGL-ADMIN / NexusAdmin@2026!
+        Credentials are validated for authorized employee and administrator access.
       </div>
     </form>
   );
