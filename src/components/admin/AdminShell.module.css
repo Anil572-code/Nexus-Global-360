@@ -7,7 +7,7 @@
   --admin-purple: #5b3cc4;
   --admin-purple-strong: #4a2ead;
   --admin-border: #e3e5e9;
-  --admin-muted: #69707d;
+  --admin-muted: #536a7a;
   --admin-panel: #ffffff;
   --admin-soft: #f1f2f5;
 }
@@ -76,7 +76,7 @@
 
 .sectionLabel {
   padding: 17px 16px 7px;
-  color: #8a909a;
+  color: #687d8c;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.09em;
@@ -96,7 +96,7 @@
   align-items: center;
   gap: 9px;
   border-radius: 7px;
-  color: #4e5561;
+  color: #3f5565;
   text-decoration: none;
   font-size: 13px;
   font-weight: 600;
@@ -250,12 +250,12 @@
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #777e88;
+  color: #566c7c;
   font-size: 11px;
 }
 
 .breadcrumb i {
-  color: #c0c4ca;
+  color: #94a3ad;
   font-style: normal;
 }
 
@@ -270,7 +270,7 @@
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #59606b;
+  color: #40596b;
   font-size: 11px;
   font-weight: 600;
 }

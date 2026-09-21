@@ -961,3 +961,110 @@
     max-width: 1390px !important;
   }
 }
+
+/* ========================================================================== */
+/* v8.5.25 - ADMIN SHELL, CONTRAST & SIGN-OUT AUTHORITY CLOSURE               */
+/* Align the fixed rail to the reserved shell column and strengthen readable  */
+/* secondary text without changing workflow, permissions, records or layout.  */
+/* ========================================================================== */
+
+/* The shell grid reserves 244px. Earlier premium authority forced the fixed
+   rail to 236px, leaving a visible canvas strip between rail and top bar. */
+.nexus-admin-premium aside {
+  width: 244px !important;
+  box-sizing: border-box !important;
+}
+
+/* Sidebar navigation remains secondary to content, but must not look disabled. */
+.nexus-admin-premium aside p,
+.nexus-admin-premium aside span {
+  color: rgba(255,255,255,.82) !important;
+}
+.nexus-admin-premium aside nav a {
+  color: rgba(248,252,255,.93) !important;
+}
+.nexus-admin-premium aside nav a svg {
+  color: rgba(232,247,255,.88) !important;
+}
+.nexus-admin-premium aside nav [class*="uppercase"],
+.nexus-admin-premium aside nav [class*="tracking"],
+.nexus-admin-premium aside [class*="uppercase"][class*="tracking"] {
+  color: rgba(237,248,255,.78) !important;
+}
+.nexus-admin-premium aside > div:nth-last-child(2) *,
+.nexus-admin-premium aside > section:nth-last-child(2) *,
+.nexus-admin-premium aside > div:not(:first-child):not(:last-child)[class*="bg-white"] *,
+.nexus-admin-premium aside > section[class*="bg-white"] * {
+  color: rgba(247,252,255,.86) !important;
+}
+
+/* Stronger contrast hierarchy across the administration workspace. */
+.nexus-admin-premium {
+  --admin-text: #15384f;
+  --admin-muted: #526b7c;
+  --admin-muted-2: #647a89;
+}
+
+.nexus-admin-premium main p {
+  color: #526b7c;
+}
+
+.nexus-admin-premium .admin-page-subtitle {
+  color: #526b7c !important;
+}
+.nexus-admin-premium .admin-scope-card span:not(.admin-status-dot) {
+  color: #617786 !important;
+}
+.nexus-admin-premium .admin-kpi-copy > span {
+  color: #4f6879 !important;
+}
+.nexus-admin-premium .admin-kpi-copy small {
+  color: #667b89 !important;
+}
+.nexus-admin-premium .admin-card-title p {
+  color: #607786 !important;
+}
+.nexus-admin-premium .admin-module-copy span,
+.nexus-admin-premium .admin-module-number span {
+  color: #627887 !important;
+}
+.nexus-admin-premium .admin-data-table td span {
+  color: #607786 !important;
+}
+.nexus-admin-premium .admin-audit-copy span,
+.nexus-admin-premium .admin-audit-row time {
+  color: #617786 !important;
+}
+.nexus-admin-premium main thead th {
+  color: #526b7c !important;
+}
+.nexus-admin-premium main tbody td {
+  color: #35566c !important;
+}
+
+/* CSS-module workspaces use semantic class-name fragments. Strengthen only
+   secondary/help metadata; status colors and disabled states stay semantic. */
+.nexus-admin-premium main [class*="subtle"],
+.nexus-admin-premium main [class*="help"],
+.nexus-admin-premium main [class*="tableMeta"],
+.nexus-admin-premium main [class*="panelHeader"],
+.nexus-admin-premium main [class*="pagination"],
+.nexus-admin-premium main [class*="modalIdentity"] p,
+.nexus-admin-premium main [class*="sectionTitle"] > p,
+.nexus-admin-premium main [class*="field"] small,
+.nexus-admin-premium main [class*="moduleCard"] small,
+.nexus-admin-premium main [class*="review"] span,
+.nexus-admin-premium main [class*="userSummary"] small,
+.nexus-admin-premium main [class*="securityMenu"] small,
+.nexus-admin-premium main [class*="securityFormHeader"] p,
+.nexus-admin-premium main [class*="securityFields"] p,
+.nexus-admin-premium main [class*="modalFooter"] > span {
+  color: #5d7383 !important;
+}
+
+.nexus-admin-premium main input::placeholder,
+.nexus-admin-premium main textarea::placeholder {
+  color: #748694 !important;
+  opacity: 1 !important;
+}
+

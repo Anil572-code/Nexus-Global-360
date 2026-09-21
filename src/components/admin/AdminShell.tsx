@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import SignOutConfirmDialog from "@/components/SignOutConfirmDialog";
 import type { SessionUser } from "@/lib/auth";
 import styles from "./AdminShell.module.css";
 
@@ -49,6 +50,8 @@ export default function AdminShell({
 }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [signOutOpen, setSignOutOpen] = useState(false);
+  const [signOutBusy, setSignOutBusy] = useState(false);
   const initials = user.name.split(" ").filter(Boolean).map((part) => part[0]).join("").slice(0, 2).toUpperCase();
   const allowed = new Set(permissions);
 
@@ -59,8 +62,12 @@ export default function AdminShell({
   }, []);
 
   async function logout() {
-    try { await fetch("/api/auth/logout", { method: "POST" }); }
-    finally { window.location.assign("/login"); }
+    setSignOutBusy(true);
+    try {
+      await fetch("/api/auth/logout", { method: "POST" });
+    } finally {
+      window.location.assign("/login");
+    }
   }
 
   const controlPlane: NavLink[] = [
@@ -96,7 +103,7 @@ export default function AdminShell({
         <div className={styles.userPanel}>
           <div className={styles.avatar} aria-hidden="true">{initials}</div>
           <div className={styles.userCopy}><strong>{user.name}</strong><span>{roleLabel(user.role)}</span></div>
-          <button type="button" onClick={logout} className={styles.iconButton} title="Sign out" aria-label="Sign out"><Icon name="logout"/></button>
+          <button type="button" onClick={() => setSignOutOpen(true)} className={styles.iconButton} title="Sign out" aria-label="Sign out"><Icon name="logout"/></button>
         </div>
       </aside>
       {menuOpen ? <button type="button" className={styles.scrim} aria-label="Close administration navigation" onClick={() => setMenuOpen(false)}/> : null}
@@ -108,6 +115,13 @@ export default function AdminShell({
         </header>
         <main id="admin-main-content" tabIndex={-1} className={styles.content}>{children}</main>
       </div>
+
+      <SignOutConfirmDialog
+        open={signOutOpen}
+        busy={signOutBusy}
+        onCancel={() => setSignOutOpen(false)}
+        onConfirm={logout}
+      />
     </div>
   );
 }

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import SignOutConfirmDialog from "@/components/SignOutConfirmDialog";
 import AuthoritativeProgressWorkspace from "@/components/progress/AuthoritativeProgressWorkspace";
 
 type IconName = "overview" | "training" | "progress" | "certificates" | "leaderboard" | "achievements" | "logout" | "menu";
@@ -48,14 +49,20 @@ export default function PortalShell({
 }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [signOutOpen, setSignOutOpen] = useState(false);
+  const [signOutBusy, setSignOutBusy] = useState(false);
   const currentPage = pageLabel(pathname);
   const immersiveTraining = pathname.endsWith("/challenge");
   const authoritativeProgress = pathname === "/progress";
   const userInitials = user.name.split(" ").map((part) => part[0]).join("").slice(0, 2).toUpperCase();
 
   async function logout() {
-    await fetch("/api/auth/logout", { method: "POST" });
-    window.location.assign("/login");
+    setSignOutBusy(true);
+    try {
+      await fetch("/api/auth/logout", { method: "POST" });
+    } finally {
+      window.location.assign("/login");
+    }
   }
 
   return (
@@ -108,7 +115,10 @@ export default function PortalShell({
           </div>
           <button
             type="button"
-            onClick={logout}
+            onClick={() => {
+              setMenuOpen(false);
+              setSignOutOpen(true);
+            }}
             className="icon-button signout-button"
             title="Sign out"
             aria-label="Sign out"
@@ -159,6 +169,13 @@ export default function PortalShell({
           {authoritativeProgress ? <AuthoritativeProgressWorkspace /> : children}
         </main>
       </div>
+
+      <SignOutConfirmDialog
+        open={signOutOpen}
+        busy={signOutBusy}
+        onCancel={() => setSignOutOpen(false)}
+        onConfirm={logout}
+      />
     </div>
   );
 }
